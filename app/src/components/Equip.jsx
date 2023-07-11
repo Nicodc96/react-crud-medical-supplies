@@ -4,7 +4,7 @@ import { db } from "../firebaseConfig/firebase";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import notFound from "../assets/notFound.jpg";
+import notFound from "../assets/notFound.png";
 import { Loading } from "./Loading";
 import { Buscador } from "./Buscador";
 import Swal from "sweetalert2";
@@ -71,18 +71,12 @@ export const Equip = () => {
         <section className="container-fluid d-flex flex-column align-items-center">
             <p className="fs-2">¡No se ha encontrado el elemento solicitado!</p>
             <img src={notFound} alt="elemento_no_encontrado" className="img-fluid" width="300" />            
-            <Link to="/equipos">                        
+            <Link to="/equipos">  
                 <Button variant='secondary'>Volver</Button>
             </Link>
         </section>
     ) : (<>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Buscador />
-                    </div>
-                </div>
-            </div>    
+            <Buscador />
             <div className="container-fluid" id="contenedorTabla">
                 <Table bordered hover responsive id="tablaEquipamentos">
                     <thead>
