@@ -1,6 +1,6 @@
 header{
   background-image: url('./assets/bg-react.jpg');
-  height: 35vh;
+  height: 37vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,6 +97,10 @@ footer{
   cursor: pointer;
 }
 
+#contenedorOpcionesTabla{
+  gap: 35vw;
+}
+
 /* Create */
 #contenedorForm{
   margin-top: 2vh;
@@ -117,14 +121,14 @@ footer{
 }
 
 .buscadorBox {
-  position: relative;;
+  position: relative;
   top: 10px;
 }
 
 .buscadorButton {
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 1vh;
   cursor: pointer;
   height: 100%;
   border: none;

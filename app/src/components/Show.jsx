@@ -84,19 +84,13 @@ export const Show = () => {
         return (<><Loading /></>);
     }
     return <>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <Buscador />
-            </div>
-            <div className="col">
-              <Link to="/create">
-                <Button variant="success" className="mt-2 mb-2">
-                  Agregar
-                </Button>
-              </Link>
-            </div>
+        <div className="d-flex justify-content-center" id="contenedorOpcionesTabla">
+          <div>
+            <Link to="/create">
+              <Button variant="success" className="mt-2 mb-2">Agregar un equipo</Button>
+            </Link>
           </div>
+          <Buscador />
         </div>
         <div className="container-fluid" id="contenedorTabla">
           <Table bordered hover responsive id="tablaEquipamentos">

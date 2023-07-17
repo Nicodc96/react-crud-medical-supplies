@@ -16,12 +16,12 @@ function App() {
         <header>
           <article className='header-text'>
             <h1>Equipos Médicos</h1>
-            <p>Grupo 8 - <span className='fw-semibold fst-italic'>Codo a Codo ~ 2023</span></p>
+            <p className='fw-semibold fst-italic'>Codo a Codo ~ 2023</p>
           </article>
         </header>
         <main>
-          <div className='d-flex justify-content-center '>
-            <h2 className='mt-2 fs-2 fw-lighter' id='mainH2'>Proyecto CRUD con React & Firestore</h2>
+          <div className='d-flex justify-content-center'>
+            <h2 className='mt-5 mb-4 fs-2 fw-lighter' id='mainH2'>Proyecto CRUD con React & Firestore</h2>
           </div>
         <Routes>
           <Route path="/" element={ <Home /> }/>
@@ -37,7 +37,7 @@ function App() {
               <img src={logoCaC1} alt="logo cac" width='75px' className='pt-2'/>
               <p className='mb-0 fs-4 text-white-50 fst-italic pt-2 txtFooterCaC'>Codo a Codo ~ React</p>
             </div>
-            <p className='mb-0 text-white-50 pt-3 txtFooterCaC'>Grupo 8 ~ CaC React &copy; 2023</p>
+            <p className='mb-0 text-white-50 pt-3 txtFooterCaC'>Nicolás Díaz ~ CaC React &copy; 2023</p>
           </div>
         </footer>
       </BrowserRouter>

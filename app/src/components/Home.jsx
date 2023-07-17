@@ -19,26 +19,14 @@ export const Home = () => {
                                 <img src={logoReact} className='img-fluid px-3' alt="logo-react" />
                                 <p className="fs-3 fw-semibold pt-3">Acerca del proyecto</p>
                             </div>
-                            <p className="ps-3 text-md-start me-2">La aplicación está desarrollada en conjunto por:</p>
-                            <div className='d-flex gap-4'>
-                                <ul>
-                                    <li>David Grinberg</li>
-                                    <li>Edgar Patiño</li>
-                                    <li>Eduardo Aguirre</li>
-                                    <li>Francisco Campos</li>
-                                    <li>Juan Amadío</li>
-                                    <li>Laura Leon</li>
-                                </ul>
-                                <ul>
-                                    <li>Lisandro Escalada</li>
-                                    <li>Maria Fernanda Calzolari</li>
-                                    <li>Nicolas Díaz</li>
-                                    <li>Pedro Palavecino</li>
-                                    <li>Virginia Pérez</li>
-                                </ul>
-                            </div>
+                            <p className="ps-3 text-md-start me-2">
+                                La aplicación fue desarrollada durante la cursada de Codo a Codo React, 2023 durante los meses de Marzo a Julio. 
+                                Allí aprendimos sobre el uso y el manejo de la librería <span className='fw-semibold'>React</span> y sobre la utilización 
+                                de este en aplicaciones reales consumiendo una información proporcionada por una API externa o interna.
+                            </p>
                             <p className="ps-3 text-md-start me-2">Este proyecto está orientado a la creación, lectura, edición y eliminación (CRUD) de equipos médicos.</p>
-                            <Link to={'https://github.com/jotadeaa/react-23307-elchavodel8'} target='_blank'>
+                            <p className="ps-3 text-md-start me-2 mt-2 fst-italic">El proyecto es una versión completamente personal del proyecto original diseñado en conjunto.</p>
+                            <Link to={'https://github.com/Nicodc96/react-23307-elchavodel8'} target='_blank'>
                                 <button className="btn btn-outline-light ms-3">Link al repositorio</button>
                             </Link>
                         </div>

@@ -12,22 +12,11 @@ export const Buscador = () => {
         navigate(`/equipo/${searchText}`);
     }
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <form className="buscadorContainer" onSubmit={handleSubmit}>
-                        <div className="buscadorBox">
-                            <input
-                            className="buscadorInput"
-                                type="text"
-                                value={searchText}
-                                onChange={(e)=>setSearchText(e.target.value)}
-                            />
-                            <button type="submit" className="buscadorButton"><FaSearch /></button>
-                        </div>
-                    </form>
-                </div>
+        <form className="buscadorContainer" onSubmit={handleSubmit}>
+            <div className="buscadorBox">
+                <input className="buscadorInput" type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)} />
+                <button type="submit" className="buscadorButton"><FaSearch /></button>
             </div>
-        </div>   
+        </form>
     )
 }
