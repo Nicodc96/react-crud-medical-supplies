@@ -82,6 +82,29 @@ footer{
 }
 
 /* Show */
+.card-size{
+  width: 16vw;
+  height: 45vh;
+}
+.card-img-top-custom{
+  width: auto!important;
+  height: 20vh!important;
+}
+#contenedorCards, #containerControlsCards{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.width-95{
+  width: 95%!important;
+}
+#contenedorPaginacion{
+  display: flex;
+  margin-top: 2vh;
+  gap: 10vw;
+  justify-content: end;
+  margin-right: 17vw;
+}
+
 #contenedorTabla{
   margin-top: 3vh;
   margin-bottom: 3vh;

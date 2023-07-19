@@ -9,12 +9,14 @@ export const Buscador = () => {
     // Función que capture lo que ingresamos en el buscador y lo envia a la URL
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/equipo/${searchText}`);
+        navigate(`/equipos/${searchText}`);
     }
     return (
         <form className="buscadorContainer" onSubmit={handleSubmit}>
             <div className="buscadorBox">
-                <input className="buscadorInput" type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)} />
+                <input className="buscadorInput" type="text" 
+                value={searchText} onChange={(e)=>setSearchText(e.target.value)} 
+                placeholder="'Enter' para buscar"/>
                 <button type="submit" className="buscadorButton"><FaSearch /></button>
             </div>
         </form>

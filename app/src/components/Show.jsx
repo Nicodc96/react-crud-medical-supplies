@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, getDocs} from "firebase/firestore";
 import { db } from "../firebaseConfig/firebase";
-import { Button, Table } from "react-bootstrap";
-import Swal from "sweetalert2";
+import { Button } from "react-bootstrap";
 import { Buscador } from "./Buscador";
 import { Loading } from "./Loading";
+import { Card } from "./Card";
 
 export const Show = () => { 
     const [equipments, setEquipments] = useState([]);
@@ -13,7 +13,7 @@ export const Show = () => {
     const [page, setPage] = useState(1);
     const [maxPages, setMaxPages] = useState(0);
 
-    // Función para mostrar los docs
+    // Función para mostrar los documentos
     const getEquipments = async (pagina) => {
         const data = await getDocs(equipmentCollection);
         const datosTotales = [...data.docs.map(doc => ({
@@ -22,11 +22,11 @@ export const Show = () => {
           }))];
         const equiposMedicosPaginado = [];
         for (let i = 0; i < datosTotales.length; i++){
-          if (i % 10 === 0 && i != 0){
+          if (i % 12 === 0 && i != 0){
             equiposMedicosPaginado.push({
-             page: i/10,
-             docs: i == 10 ? 
-             [...datosTotales.slice(undefined, i)] : [...datosTotales.slice(i, i+10)]
+             page: i/12,
+             docs: i == 12 ? 
+             [...datosTotales.slice(undefined, i)] : [...datosTotales.slice(i, i+12)]
             });
           }          
         }
@@ -39,52 +39,42 @@ export const Show = () => {
         }
     };
 
-    // (fer) función para mostrar un sólo doc 
-    const getEquipment = async (id) => {
-      const equipment = await getDoc(await doc(db, "medicalSupplies", id));
-    };
-    // (fer) utilizamos el hook useLocation para tomar lo que viene por params del buscador
-    const useQuery = () => {
-      return new URLSearchParams(useLocation().search);
-       const query = useQuery()
-       const search = query.get("search");
-   }
-
-    const removeEquipment = async (id) => {
-        const equipmentDoc = doc(db, "medicalSupplies", id);
-        return await deleteDoc(equipmentDoc);
-    };
-    const confirmRemove = (id) => {
-        Swal.fire({
-            title: '¿Estás seguro?',
-            text: "¡Esta acción no se puede deshacer!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar'
-          }).then((result) => {
-            if (result.isConfirmed) {
-                removeEquipment(id);
-                Swal.fire(
-                '¡Eliminado!',
-                'El equipo médico se ha eliminado.',
-                'success'
-              ).then(() => {location.reload()});
-            }
-          })
-    };
-
     useEffect(() => {
         getEquipments(page);
     }, [page]);
 
-    if (equipments.length === 0){
-        return (<><Loading /></>);
-    }
+    if (equipments.length === 0) return (<><Loading/></>);
+
     return <>
-        <div className="d-flex justify-content-center" id="contenedorOpcionesTabla">
+        <section className="mt-4">
+          <div className="row width-95">
+            <div className="col-3 d-flex flex-column align-items-center" id="containerControlsCards">
+              <Link to="/create">
+                <Button variant="success" className="mt-2 mb-2">Agregar un equipo</Button>
+              </Link>
+              <Buscador />
+            </div>
+            <div className="col-9 d-flex gap-3 flex-wrap justify-content-center" id="contenedorCards">
+              {equipments.map((equipment) => (<Card equipment={equipment} key={equipment.id}/> ))}
+          </div>
+            </div>
+            <div className="row width-95">
+              <section className="col" id="contenedorPaginacion">
+                <Button 
+                  className={page == 1 ? "btn primary disabled" : "primary"}
+                  onClick={() => page == 1 ? setPage(page) : setPage(page-1)}>
+                  Página anterior
+                </Button>
+                <p className="fw-semibold">Página: {page}</p>
+                <Button 
+                  className={page == maxPages ? "btn primary disabled" : "primary"} 
+                  onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
+                  Página Siguiente
+                </Button>
+              </section>
+            </div>
+        </section>
+        {/* <div className="d-flex justify-content-center" id="contenedorOpcionesTabla">
           <div>
             <Link to="/create">
               <Button variant="success" className="mt-2 mb-2">Agregar un equipo</Button>
@@ -138,10 +128,7 @@ export const Show = () => {
                           </svg>
                         </Button>
                       </Link>
-                      <Button
-                        variant="danger"
-                        onClick={() => confirmRemove(equipment.id)}
-                      >
+                      <Button variant="danger" onClick={() => confirmRemove(equipment.id)}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -168,11 +155,19 @@ export const Show = () => {
             </tbody>
           </Table>
           <div id="contenedorPaginacion" className="d-flex justify-content-between">
-            <Button className={page == 1 ? "btn primary disabled" : "primary"} onClick={() => page == 1 ? setPage(page) : setPage(page-1)}>Página anterior</Button>
+            <Button 
+              className={page == 1 ? "btn primary disabled" : "primary"}
+              onClick={() => page == 1 ? setPage(page) : setPage(page-1)}>
+              Página anterior
+            </Button>
             <p className="fw-semibold">Página: {page}</p>
-            <Button className={page == maxPages ? "btn primary disabled" : "primary"} onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>Página Siguiente</Button>
+            <Button 
+              className={page == maxPages ? "btn primary disabled" : "primary"} 
+              onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
+              Página Siguiente
+            </Button>
           </div>
-        </div>
+        </div> */}
       </>
     ;
 }
