@@ -1,10 +1,10 @@
 {
-  "name": "app-chavodel8",
+  "name": "crud-medic-supplies",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.1",
   "type": "module",
-  "description": "Grupo 8, CaC React Comisión 23307",
-  "author": "David Grinberg, Edgar Patiño, Eduardo Aguirre, Francisco Campos, Juan Amadío, Laura Leon, Lisandro Escalada, Maria Fernanda, Nicolas Díaz, Pedro Palavecino, Virginia Pérez",
+  "description": "CRUD Equipos médicos",
+  "author": "Nicolas Díaz",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
