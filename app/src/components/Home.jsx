@@ -38,7 +38,7 @@ export const Home = () => {
                 <div id="cardsCasas" className="container fluid d-flex gap-3 justify-content-center">
                     <article className="card">
                         <div className="card-img-container">
-                            <img src={imgDesfibrilador} className="card-img-top" alt="casa_de_lujo_lago" />
+                            <img src={imgDesfibrilador} className="card-img-top" alt="desfibrilador" />
                         </div>
                         <div className="card-body bg-gray"> 
                             <h3 className="card-title fs-3 pb-2 text-center">Desfibriladores</h3>
@@ -48,7 +48,7 @@ export const Home = () => {
                     </article>
                     <article className="card">
                         <div className="card-img-container">
-                            <img src={imgMesaQuirurgica} className="card-img-top" alt="casa_de_lujo_moderna" />
+                            <img src={imgMesaQuirurgica} className="card-img-top" alt="mesa quirurgica" />
                         </div>
                         <div className="card-body bg-gray">
                             <h3 className="card-title fs-3 pb-2 text-center">Mesas Quirurgicas</h3>
@@ -58,7 +58,7 @@ export const Home = () => {
                     </article>
                     <article className="card">
                         <div className="card-img-container">
-                            <img src={imgUltrasonido} className="card-img-top" alt="casa_con_piscina" />
+                            <img src={imgUltrasonido} className="card-img-top" alt="ultrasonido" />
                         </div>
                         <div className="card-body bg-gray">
                             <h3 className="card-title fs-3 pb-2 text-center">Ultrasonido Estacionario</h3>

@@ -21,7 +21,7 @@ function App() {
         </header>
         <main>
           <div className='d-flex justify-content-center'>
-            <h2 className='mt-5 mb-4 fs-2 fw-lighter' id='mainH2'>Proyecto CRUD con React & Firestore</h2>
+            <h2 className='mt-5 mb-4 fs-2 fw-lighter' id='mainH2'>Proyecto CRUD con React & Firestore</h2> {/* Change this in the future */}
           </div>
         <Routes>
           <Route path="/" element={ <Home /> }/>

@@ -44,6 +44,12 @@ footer{
   width: 60rem;
   height: 25rem;
 }
+.divisor{
+  width: 17vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: 1px solid #cfcfcf;
+}
 
 /* Cards Home */
 #cardsCasas > .card{
@@ -84,15 +90,29 @@ footer{
 /* Show */
 .card-size{
   width: 16vw;
-  height: 45vh;
+  height: 46vh;
 }
-.card-img-top-custom{
-  width: auto!important;
-  height: 20vh!important;
+.card-img-top-custom{  
+  width: max-content!important;
+  height: 19vh!important;
 }
 #contenedorCards, #containerControlsCards{
   padding-left: 0px;
   padding-right: 0px;
+}
+#containerControlsCards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  margin-left: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 4vh;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #adadad;
+  border-radius: 5px;
+  background-color: #f5f5f5;
 }
 .width-95{
   width: 95%!important;
@@ -102,24 +122,14 @@ footer{
   margin-top: 2vh;
   gap: 10vw;
   justify-content: end;
-  margin-right: 17vw;
+  margin-right: 16vw;
 }
-
-#contenedorTabla{
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-  width: 60vw;
+#contenedorBtnVolver{
+  display: flex;
+  margin-top: 2vh;
+  justify-content: center;
+  margin-left: 13.65vw;
 }
-#tablaEquipamentos th{
-  text-align: center;
-  background-color: rgb(65, 156, 65);
-  color: white;
-}
-
-#tablaEquipamentos > tbody > tr:hover{
-  cursor: pointer;
-}
-
 #contenedorOpcionesTabla{
   gap: 35vw;
 }
@@ -130,35 +140,24 @@ footer{
   margin-bottom: 4vh;
   padding-bottom: 4vh;
 }
-
 .container{
   display: flex;
   align-items:center;
   justify-content: center;
 }
 
+/* Edit */
+#formEdit > div > input{
+  width: 18vw;
+}
+
 /* Buscador */
-.buscadorContainer {
+#buscadorContainer {
   display: flex;
   justify-content: center;
+  gap: 1vh;
 }
-
-.buscadorBox {
-  position: relative;
-  top: 10px;
-}
-
-.buscadorButton {
-  position: absolute;
-  right: 0;
-  bottom: 1vh;
-  cursor: pointer;
-  height: 100%;
-  border: none;
-  background: none;
-}
-
-.buscadorInput{
+#buscadorInput{
   height: 35px;
   border-radius: 10px;
   padding:  5px 30px 5px 10px;

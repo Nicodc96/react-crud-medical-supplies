@@ -1,7 +1,7 @@
 {
   "name": "crud-medic-supplies",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.5.2",
   "type": "module",
   "description": "CRUD Equipos médicos",
   "author": "Nicolas Díaz",
@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.0",
-    "sweetalert2": "^11.7.12"
+    "sweetalert2": "^11.7.12",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

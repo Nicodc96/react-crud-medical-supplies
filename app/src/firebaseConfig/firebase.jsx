@@ -1,6 +1,7 @@
 // Importacion de node_modules
 import { initializeApp } from "firebase/app";
-import { getFirestore } from '@firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 // Credenciales de firebase
 /*
@@ -21,3 +22,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
+export const storage = getStorage(app);

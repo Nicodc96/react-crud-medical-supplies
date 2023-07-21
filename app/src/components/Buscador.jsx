@@ -12,13 +12,19 @@ export const Buscador = () => {
         navigate(`/equipos/${searchText}`);
     }
     return (
-        <form className="buscadorContainer" onSubmit={handleSubmit}>
-            <div className="buscadorBox">
-                <input className="buscadorInput" type="text" 
-                value={searchText} onChange={(e)=>setSearchText(e.target.value)} 
-                placeholder="'Enter' para buscar"/>
-                <button type="submit" className="buscadorButton"><FaSearch /></button>
-            </div>
+        <form id="buscadorContainer" onSubmit={handleSubmit}>
+            <input 
+                id="buscadorInput"
+                className="form-control"
+                type="text" 
+                value={searchText} 
+                onChange={(e)=>setSearchText(e.target.value)} 
+                placeholder="Búsqueda por nombre"
+            />
+            <button 
+                type="submit"
+                className="btn btn-primary"><FaSearch />
+            </button>
         </form>
     )
 }
