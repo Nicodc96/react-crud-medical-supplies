@@ -6,6 +6,7 @@ import { Create } from './components/Create';
 import { Edit } from './components/Edit';
 import { Navegacion } from './components/Navegacion';
 import logoCaC1 from './assets/logoCaC1.png';
+import reactLogo from './assets/react-logo.png'
 import './App.css';
 
 function App() {
@@ -14,15 +15,15 @@ function App() {
       <BrowserRouter>
         <Navegacion/>
         <header>
+          <div className='d-flex justify-content-center'>
+            <img src={reactLogo} alt="react logo" id="header-logo"/>
+          </div>
           <article className='header-text'>
-            <h1>Equipos Médicos</h1>
+            <h1 className='fst-italic'>Equipamiento Médico</h1>
             <p className='fw-semibold fst-italic'>Codo a Codo ~ 2023</p>
           </article>
         </header>
         <main>
-          <div className='d-flex justify-content-center'>
-            <h2 className='mt-5 mb-4 fs-2 fw-lighter' id='mainH2'>Proyecto CRUD con React & Firestore</h2> {/* Change this in the future */}
-          </div>
         <Routes>
           <Route path="/" element={ <Home /> }/>
           <Route path="/equipos" element={ <Show /> }/>

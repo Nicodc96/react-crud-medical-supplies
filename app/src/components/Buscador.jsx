@@ -23,7 +23,7 @@ export const Buscador = () => {
             />
             <button 
                 type="submit"
-                className="btn btn-primary"><FaSearch />
+                className="btn btn-primary"><FaSearch className="mb-1"/>
             </button>
         </form>
     )

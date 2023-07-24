@@ -1,5 +1,6 @@
 header{
-  background-image: url('./assets/bg-react.jpg');
+  background: rgb(3,0,48);
+  background: linear-gradient(90deg, rgba(3,0,48,1) 0%, rgba(0,53,131,1) 52%, rgba(3,0,48,1) 100%);
   height: 37vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,6 +9,20 @@ header{
 }
 main{
   margin-bottom: 7vh;
+}
+#header-logo{
+  width: 17vw;
+  margin-top: 4.5vh;
+  filter: brightness(70%);
+  animation: rotate-center infinite 20s linear;
+}
+@keyframes rotate-center{
+    from {
+      transform:rotate(0)
+    }
+    to {
+      transform:rotate(360deg)
+    }
 }
 .header-text{
   text-align: center;
@@ -52,8 +67,8 @@ footer{
 }
 
 /* Cards Home */
-#cardsCasas > .card{
-  width: 25rem;
+#containerCardsHome > .card{
+  width: 23vw;
 }
 .card-img-container{
   display: inline-block;
@@ -83,7 +98,7 @@ footer{
   background-color: #227dd1!important;
 }
 .text-green{
-  color: #7db90e;
+  color: #4eb10c;
   font-size: 17px;
 }
 
