@@ -4,9 +4,8 @@ import { Equip } from './components/Equip';
 import { Show } from './components/Show';
 import { Create } from './components/Create';
 import { Edit } from './components/Edit';
-import { Navegacion } from './components/Navegacion';
+import { Navegacion } from './components/HomeNavegacion';
 import logoCaC1 from './assets/logoCaC1.png';
-import reactLogo from './assets/react-logo.png'
 import './App.css';
 
 function App() {
@@ -15,12 +14,16 @@ function App() {
       <BrowserRouter>
         <Navegacion/>
         <header>
-          <div className='d-flex justify-content-center'>
-            <img src={reactLogo} alt="react logo" id="header-logo"/>
+          <div id="headerCarousel" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+              <div className="carousel-item active carousel-img-1" />
+              <div className="carousel-item carousel-img-2" />
+              <div className="carousel-item carousel-img-3" />
+            </div>
           </div>
           <article className='header-text'>
-            <h1 className='fst-italic'>Equipamiento Médico</h1>
-            <p className='fw-semibold fst-italic'>Codo a Codo ~ 2023</p>
+            <h1 className='fw-semibold'>Equipos Médicos</h1>
+            <p className='fw-semibold fst-italic text-white-50'>Codo a Codo ~ 2023</p>
           </article>
         </header>
         <main>
@@ -33,7 +36,7 @@ function App() {
         </Routes>
         </main>
         <footer className='bg-dark'>
-          <div className='d-flex justify-content-between'>
+          <div className='d-flex justify-content-between me-4 mx-4'>
             <div className='d-flex gap-2 flex-row'>
               <img 
                 src={logoCaC1}
@@ -41,9 +44,9 @@ function App() {
                 width='75px'
                 className='pt-2'
               />
-              <p className='mb-0 fs-4 text-white-50 fst-italic pt-2 txtFooterCaC'>Codo a Codo ~ React</p>
+              <p className='mb-0 text-white-50 fst-italic pt-3 txtFooterCaC'>Codo a Codo ~ React</p>
             </div>
-            <p className='mb-0 text-white-50 pt-3 txtFooterCaC'>Nicolás Díaz ~ CaC React &copy; 2023</p>
+            <p className='mb-0 text-white-50 pt-3 txtFooterCaC'>Nicolás Díaz - CaC React &copy; 2023</p>
           </div>
         </footer>
       </BrowserRouter>

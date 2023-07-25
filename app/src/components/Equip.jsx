@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Loading } from "./Loading";
 import { Buscador } from "./Buscador";
-import { Card } from "./Card";
+import { Card } from "./CardShow";
 import { AuxiliarFunctions } from "../functions/auxFuncions";
 import notFound from "../assets/notFound.png";
 

@@ -5,7 +5,7 @@ import { db } from "../firebaseConfig/firebase";
 import { Button } from "react-bootstrap";
 import { Buscador } from "./Buscador";
 import { Loading } from "./Loading";
-import { Card } from "./Card";
+import { Card } from "./CardShow";
 import { AuxiliarFunctions } from "../functions/auxFuncions";
 
 export const Show = () => {
@@ -62,18 +62,18 @@ export const Show = () => {
     return (
       <>
         <section className="mt-4">
-          <h2 className="text-center fs-2 pb-4 fw-semibold">Listado de los equipos médicos</h2>
+          <h2 className="text-center fs-2 pb-4 fw-lighter">Todos los equipos médicos</h2>
           <div className="row width-95">
             <div className="col-3">
               <div id="containerControlsCards">
                 <Buscador />
                 <div className="divisor"/>
                 <Link to="/create">
-                  <Button variant="success" className="mt-2 mb-2">Agregar un equipo</Button>
+                  <Button variant="success" className="mt-3 mb-3">Agregar un equipo</Button>
                 </Link>
                 <div className="divisor"/>
-                <p className="text-center fs-5 mb-1">Ordenar datos</p>
-                <section id='contenedorCheckBoxOrdenar'>
+                <p className="text-center fs-5 mt-1 mb-2">Ordenar datos</p>
+                <section id="contenedorCheckBoxOrdenar">
                   <div className="row">
                     <div className="col-2 d-flex flex-column gap-1">
                       <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarAZ"
@@ -99,21 +99,22 @@ export const Show = () => {
               {equipments.map(equipment => (<Card equipment={equipment} key={equipment.id}/>))}
             </div>
           </div>
-            <div className="row width-95">
-              <section className="col" id="contenedorPaginacion">
-                <Button 
-                  className={page === 1 ? "btn primary disabled" : "primary"}
-                  onClick={() => page === 1 ? setPage(page) : setPage(page-1)}>
-                  Página anterior
-                </Button>
-                <p className="fw-semibold">Página: {page}</p>
-                <Button 
-                  className={page === maxPages ? "btn primary disabled" : "primary"} 
-                  onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
-                  Página Siguiente
-                </Button>
-              </section>
-            </div>
+          <div className="row width-95">
+            <section className="col-3"></section>
+            <section className="col-9" id="contenedorPaginacion">
+              <Button 
+                className={page === 1 ? "btn primary disabled" : "primary"}
+                onClick={() => page === 1 ? setPage(page) : setPage(page-1)}>
+                Página anterior
+              </Button>
+              <p className="fw-semibold">Página: {page}</p>
+              <Button 
+                className={page === maxPages ? "btn primary disabled" : "primary"} 
+                onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
+                Página Siguiente
+              </Button>
+            </section>
+          </div>
         </section>
       </>
     )
