@@ -92,7 +92,6 @@ footer{
   width: 25rem;
   height: 20rem;
 }
-
 #botonTarjetas{
   background-color: #005bb1;
   color: white;
@@ -143,14 +142,46 @@ footer{
   transition: all 0.5s;
 }
 #containerInfoAcercaDeText{
-  position: absolute;
-  top: 170vh;
+  padding-top: 8vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  height: 40vh;
 }
-#imgBgInfoAcercaDe{
-  height: 45vh;
-  opacity: 25%;
+#contenedorTecnologiasUsadas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 5vh;
+  height: 30vh;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1rem;
 }
-
+.logos-tecnologias{
+  width: 90px;
+  height: 90px;
+}
+.logo-extrawidth{
+  width: 160px;
+}
+.orange-tooltip{
+  --bs-tooltip-bg: #ffa713;
+}
+.purple-tooltip{
+  --bs-tooltip-bg: #7809f7;
+}
+.yellow-tooltip{
+  --bs-tooltip-bg: #f0dc4e;
+  --bs-tooltip-color: #25282c;
+}
+.green-tooltip{
+  --bs-tooltip-bg: #83cd29;
+  --bs-tooltip-color: #25282c;
+}
+.blue-tooltip{
+  --bs-tooltip-bg: #0f6ec7;
+}
 /*------------- Show -------------*/
 .card-size{
   width: 16vw;
