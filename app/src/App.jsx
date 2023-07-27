@@ -5,6 +5,7 @@ import { Show } from './components/Show';
 import { Create } from './components/Create';
 import { Edit } from './components/Edit';
 import { Navegacion } from './components/HomeNavegacion';
+import { HeaderText } from './components/HeaderText';
 import logoCaC1 from './assets/logoCaC1.png';
 import './App.css';
 
@@ -22,7 +23,7 @@ function App() {
             </div>
           </div>
           <article className='header-text'>
-            <h1 className='fw-semibold'>Equipos Médicos</h1>
+            <HeaderText />
             <p className='fw-semibold fst-italic text-white-50'>Codo a Codo ~ 2023</p>
           </article>
         </header>
