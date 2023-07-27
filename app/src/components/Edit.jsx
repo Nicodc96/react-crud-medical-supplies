@@ -106,9 +106,9 @@ export const Edit = () => {
         return (<><Loading /></>);
     }
     return (
-    <section className="d-flex justify-content-center mt-4">
+    <section className="d-flex justify-content-center pt-4">
         <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
-            <h2 className='mt-4 mb-3 fs-4'>Modificación de un Equipo Médico</h2>
+            <h2 className='mt-4 mb-5 fs-3 fw-lighter'>Complete el formulario</h2>
             <form id='formEdit' onSubmit={confirmModify}>
                 <div className="row">
                     <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">

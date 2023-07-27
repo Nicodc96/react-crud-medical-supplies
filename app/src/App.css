@@ -35,6 +35,11 @@
       transform:rotate(360deg)
     }
 }
+main{
+  background-image: url('./assets/bg-repeat2.png');
+  background-repeat: repeat;
+  background-size: 4vw;
+}
 #mainH2{
   border-style: solid;
   border-color: #5e6670;
@@ -238,6 +243,7 @@ footer{
   margin-top: 2vh;
   margin-bottom: 4vh;
   padding-bottom: 4vh;
+  background-color: white;
 }
 .container{
   display: flex;

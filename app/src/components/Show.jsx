@@ -61,7 +61,7 @@ export const Show = () => {
 
     return (
       <>
-        <section className="mt-4 mb-5">
+        <section className="pt-4 pb-5">
           <h2 className="text-center fs-2 pb-4 fw-lighter">Todos los equipos médicos</h2>
           <div className="row width-95">
             <div className="col-3">
