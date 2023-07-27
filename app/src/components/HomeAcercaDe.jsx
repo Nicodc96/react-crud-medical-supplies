@@ -1,5 +1,6 @@
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Tooltip, OverlayTrigger } from "react-bootstrap";
 import reactLogo from '../assets/react.svg';
 import firebaseLogo from '../assets/firebase.svg';
 import bootstrapLogo from '../assets/bootstrap.svg';
@@ -7,8 +8,9 @@ import jsLogo from '../assets/javascript.svg';
 import nodejsLogo from '../assets/nodejs.svg';
 
 export const AcercaDe = () => {
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    const renderTooltip = props => (
+        <Tooltip {...props}>{props.title}</Tooltip>
+      );
     return (
         <>
             <section id="contenedorAcercaDe">
@@ -48,51 +50,56 @@ export const AcercaDe = () => {
                     <div className="col-4 text-white">
                         <h4 className="fw-lighter text-center">Tecnologías utilizadas</h4>
                         <div className="rounded" id="contenedorTecnologiasUsadas">
-                            <img 
-                                src={reactLogo} 
-                                alt="react-logo" 
-                                className="logos-tecnologias"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="blue-tooltip"
-                                data-bs-title="React"
-                            />
-                            <img 
-                                src={firebaseLogo} 
-                                alt="firebase-logo" 
-                                className="logos-tecnologias"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="orange-tooltip"
-                                data-bs-title="Firebase"
-                            />
-                            <img 
-                                src={bootstrapLogo} 
-                                alt="bootstrap-logo" 
-                                className="logos-tecnologias"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="purple-tooltip"
-                                data-bs-title="Bootstrap"
-                            />
-                            <img 
-                                src={jsLogo} 
-                                alt="js-logo" 
-                                className="logos-tecnologias"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="yellow-tooltip"
-                                data-bs-title="JavaScript"
-                            />
-                            <img 
-                                src={nodejsLogo} 
-                                alt="node-logo" 
-                                className="logos-tecnologias logo-extrawidth"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="green-tooltip"
-                                data-bs-title="Node.js"
-                            />
+                            <OverlayTrigger overlay={renderTooltip({
+                                className:"blue-tooltip",
+                                title: "React",
+                                placement:"top"})}>
+                                <img 
+                                    src={reactLogo} 
+                                    alt="react-logo" 
+                                    className="logos-tecnologias"
+                                />
+                            </OverlayTrigger>
+                            <OverlayTrigger overlay={renderTooltip({
+                                className:"orange-tooltip",
+                                title: "Firebase",
+                                placement:"top"})}>
+                                <img 
+                                    src={firebaseLogo} 
+                                    alt="firebase-logo" 
+                                    className="logos-tecnologias"
+                                />
+                            </OverlayTrigger>
+                            <OverlayTrigger overlay={renderTooltip({
+                                className:"purple-tooltip",
+                                title: "Bootstrap",
+                                placement:"top"})}>
+                                <img 
+                                    src={bootstrapLogo} 
+                                    alt="bootstrap-logo" 
+                                    className="logos-tecnologias"
+                                />
+                            </OverlayTrigger>                    
+                            <OverlayTrigger overlay={renderTooltip({
+                                className:"yellow-tooltip",
+                                title: "JavaScript",
+                                placement:"top"})}>
+                                <img 
+                                    src={jsLogo} 
+                                    alt="js-logo" 
+                                    className="logos-tecnologias"
+                                />
+                            </OverlayTrigger>
+                            <OverlayTrigger overlay={renderTooltip({
+                                className:"green-tooltip",
+                                title: "Node.js",
+                                placement:"top"})}>
+                                <img 
+                                    src={nodejsLogo} 
+                                    alt="node-logo" 
+                                    className="logos-tecnologias logo-extrawidth"
+                                />
+                            </OverlayTrigger>
                         </div>
                     </div>
                 </div>

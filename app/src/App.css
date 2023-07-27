@@ -163,7 +163,10 @@ footer{
   height: 90px;
 }
 .logo-extrawidth{
-  width: 160px;
+  width: 180px;
+}
+.orange-tooltip, .yellow-tooltip, .green-tooltip{
+  --bs-tooltip-color: #25282c;
 }
 .orange-tooltip{
   --bs-tooltip-bg: #ffa713;
@@ -173,11 +176,9 @@ footer{
 }
 .yellow-tooltip{
   --bs-tooltip-bg: #f0dc4e;
-  --bs-tooltip-color: #25282c;
 }
 .green-tooltip{
   --bs-tooltip-bg: #83cd29;
-  --bs-tooltip-color: #25282c;
 }
 .blue-tooltip{
   --bs-tooltip-bg: #0f6ec7;
