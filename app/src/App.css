@@ -245,7 +245,6 @@ footer{
   align-items: center;
   height: max-content;
   margin-left: 2vw;
-  margin-top: 20vh;
   padding-top: 2vh;
   padding-bottom: 4vh;
   border-style: solid;
@@ -274,6 +273,11 @@ footer{
 }
 #contenedorCheckBoxOrdenar{
   margin-top: 1vh;
+}
+
+/*------------- Card Show -------------*/
+.btn-modificar:hover{
+  background-color: #dfa803!important;
 }
 
 /*------------- Create -------------*/

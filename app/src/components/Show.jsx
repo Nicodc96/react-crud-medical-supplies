@@ -34,15 +34,21 @@ export const Show = () => {
             docs: [...datosTotales]
           });
         } else{
-          for (let i = 0; i < datosTotales.length; i++){
-            if (i % 12 === 0 && i !== 0){
+            for (let i = 12; i <= datosTotales.length; i+=12){
+              let pagina = 1;
               equiposMedicosPaginado.push({
-               page: i/12,
-               docs: i === 12 ? 
-               [...datosTotales.slice(undefined, i)] : [...datosTotales.slice(i, i+12)]
+                page: pagina,
+                docs: i === 12 ? 
+                [...datosTotales.slice(undefined, i)] : [...datosTotales.slice(i-12, i)]
               });
+              if (i + 12 >= datosTotales.length){
+                equiposMedicosPaginado.push({
+                  page: pagina+1,
+                  docs: [...datosTotales.slice(i, undefined)]
+                });
+                break;
+              } else pagina++;
             }
-          }
         }
         setMaxPages(equiposMedicosPaginado.length);
         equiposMedicosPaginado.forEach(equipo => {
@@ -107,7 +113,7 @@ export const Show = () => {
                 onClick={() => page === 1 ? setPage(page) : setPage(page-1)}>
                 Página anterior
               </Button>
-              <p className="fw-semibold">Página: {page}</p>
+              <p className="fw-semibold pt-1">Página: {page}</p>
               <Button 
                 className={page === maxPages ? "btn primary disabled" : "primary"} 
                 onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>

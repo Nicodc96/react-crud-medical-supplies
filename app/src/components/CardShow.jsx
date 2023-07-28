@@ -83,7 +83,7 @@ export const Card = ({equipment}) => {
                 </ul>
                 <div className="d-flex justify-content-center gap-2">
                     <Link to={`/edit/${equipment.id}`}>
-                        <Button variant="warning"><FaEdit size='20px' className="mb-1"/> Modificar</Button>
+                        <Button variant="warning" className="btn-modificar"><FaEdit size='20px' className="mb-1"/> Modificar</Button>
                     </Link>
                     <Button 
                         variant="danger" 

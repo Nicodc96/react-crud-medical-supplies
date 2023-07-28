@@ -47,7 +47,7 @@ function App() {
               />
               <p className='mb-0 text-white-50 fst-italic pt-3 txtFooterCaC'>Codo a Codo ~ React</p>
             </div>
-            <p className='mb-0 text-white-50 pt-3 txtFooterCaC'>Nicolás Díaz - CaC React &copy; 2023</p>
+            <p className='mb-0 text-white-50 pt-3 txtFooterCaC'>Nicolás Díaz &copy; 2023</p>
           </div>
         </footer>
       </BrowserRouter>
