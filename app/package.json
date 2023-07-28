@@ -1,7 +1,7 @@
 {
   "name": "crud-medic-supplies",
   "private": true,
-  "version": "0.10.8",
+  "version": "0.10.11",
   "type": "module",
   "description": "CRUD Equipos médicos",
   "author": "Nicolas Díaz",

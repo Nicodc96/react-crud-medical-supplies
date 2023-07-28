@@ -266,7 +266,7 @@ footer{
   display: flex;
   margin-top: 2vh;
   justify-content: center;
-  margin-left: 13.65vw;
+  padding-bottom: 4vh;
 }
 #contenedorOpcionesTabla{
   gap: 35vw;

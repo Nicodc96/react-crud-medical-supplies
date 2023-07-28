@@ -37,16 +37,22 @@ export const Equip = () => {
                 docs: [...arrayFiltrado]
               });
         } else{
-            for (let i = 0; i < arrayFiltrado.length; i++){
-                if (i % 12 === 0 && i != 0){
-                  equiposMedicosPaginado.push({
-                   page: i/12,
-                   docs: i == 12 ? 
-                   [...arrayFiltrado.slice(undefined, i)] : [...arrayFiltrado.slice(i, i+12)]
-                  });
-                }
-              }
-        }
+          for (let i = 12; i <= datosTotales.length; i+=12){
+            let pagina = 1;
+            equiposMedicosPaginado.push({
+              page: pagina,
+              docs: i === 12 ? 
+              [...datosTotales.slice(undefined, i)] : [...datosTotales.slice(i-12, i)]
+            });
+            if (i + 12 >= datosTotales.length){
+              equiposMedicosPaginado.push({
+                page: pagina+1,
+                docs: [...datosTotales.slice(i, undefined)]
+              });
+              break;
+            } else pagina++;
+          }
+      }
         setMaxPages(equiposMedicosPaginado.length);
         equiposMedicosPaginado.forEach(equipo => {
             if (equipo.page === pagina){
@@ -66,7 +72,7 @@ export const Equip = () => {
     }
     return sinElementos ? (
         // Si no encontró elementos el length va seguir siendo 0, por eso se utiliza la bandera 'sinElementos'
-        <section className="container-fluid d-flex flex-column align-items-center mt-5">
+        <section className="container-fluid d-flex flex-column align-items-center pt-5">
             <p className="fs-2">¡No se ha encontrado el elemento solicitado!</p>
             <img src={notFound} alt="elemento_no_encontrado" className="img-fluid" width="300" />            
             <Link to="/equipos">  
@@ -74,7 +80,7 @@ export const Equip = () => {
             </Link>
         </section>
     ) : (<>
-        <section className="mt-4">
+        <section className="pt-4">
           <h2 className="text-center fs-2 pb-4 fw-semibold">Listado de los equipos médicos</h2>
           <div className="row width-95">
             <div className="col-3">
@@ -112,27 +118,33 @@ export const Equip = () => {
               {equipments.map(equipment => (<Card equipment={equipment} key={equipment.id}/>))}
             </div>
           </div>
-            <div className="row width-95">
-              <section className="col" id="contenedorPaginacion">
-                <Button 
-                  className={page === 1 ? "btn primary disabled" : "primary"}
-                  onClick={() => page === 1 ? setPage(page) : setPage(page-1)}>
-                  Página anterior
-                </Button>
-                <p className="fw-semibold">Página: {page}</p>
-                <Button 
-                  className={page === maxPages ? "btn primary disabled" : "primary"} 
-                  onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
-                  Página Siguiente
-                </Button>
-              </section>
-            </div>
-        </section>
-        <div id="contenedorBtnVolver">
-            <Link to="/equipos">                        
-                <Button variant='secondary'>Inicio</Button>
-            </Link>
-        </div>
+          <div className="row width-95">
+            <section className="col-3"></section>
+            <section className="col-9" id="contenedorPaginacion">
+              <Button 
+                className={page === 1 ? "btn primary disabled" : "primary"}
+                onClick={() => page === 1 ? setPage(page) : setPage(page-1)}>
+                Página anterior
+              </Button>
+              <p className="fw-semibold pt-1">Página: {page}</p>
+              <Button 
+                className={page === maxPages ? "btn primary disabled" : "primary"} 
+                onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
+                Página Siguiente
+              </Button>
+            </section>
+          </div>
+          <div className="row width-95">
+            <section className="col-3"></section>
+            <section className="col-9">
+              <div id="contenedorBtnVolver">
+                <Link to="/equipos">                        
+                    <Button variant='secondary'>Volver al inicio</Button>
+                </Link>
+              </div>
+            </section>
+          </div>
+        </section>        
         </>
     )
 }
