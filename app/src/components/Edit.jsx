@@ -203,9 +203,16 @@ export const Edit = () => {
         <div className="col d-flex justify-content-center ps-0 pe-0">            
             <div id="contenedorCardEdit">
                 <Card equipment={equipment} enableButtons={false} key={equipmentId} />
-            </div>        
+            </div>
         </div>
     </section>
+    <div className="d-flex justify-content-center">
+        <div id="contenedorBtnVolver">
+        <Link to="/equipos">                        
+            <Button variant='secondary'>Volver al inicio</Button>
+        </Link>
+        </div>
+    </div>
     </>
     )
 }
