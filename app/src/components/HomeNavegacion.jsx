@@ -14,9 +14,7 @@ export const Navegacion = () => {
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#containerNavButtons"
-                    aria-controls="containerNavButtons" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
+                    aria-controls="containerNavButtons">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id='containerNavButtons'>

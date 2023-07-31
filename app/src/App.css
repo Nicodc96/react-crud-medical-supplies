@@ -75,15 +75,15 @@ footer{
 }
 
 /*------------- HeaderText -------------*/
-.text-header {
+.text-header, .text-header2 {
 	font-family: "Yanone Kaffeesatz";
   font-weight: 300;
 	font-size: 75px;
 	display: flex;
 	position: absolute;
-	bottom: 20vh;
+	bottom: 25vh;
 	left: 50%;
-  transform: translateX(-48%);
+  transform: translateX(-100%);
 	user-select: none;
 
   .wrapper {
@@ -111,7 +111,10 @@ footer{
     }
   }
 }
-
+.text-header2{
+  /* bottom: 15vh; */
+  transform: translateX(5%);
+}
 /*------------- Home -------------*/
 #containerCardsHome > .card{
   width: 23vw;
@@ -323,4 +326,79 @@ footer{
   height: 35px;
   border-radius: 10px;
   padding:  5px 30px 5px 10px;
+}
+
+/*------------- SECCION RESPONSIVE - MEDIA QUERIES -------------*/
+@media screen and (max-width:1440px){
+  #containerCardsHome > .card .card-img-top{
+    width: 20.6rem;
+    height: 18rem;
+  }
+}
+@media screen and (max-width:1024px){
+  .text-header, .text-header2{
+    font-size: 55px;
+  }
+  #containerCardsHome{
+    gap: 2vw!important;
+  }
+  #containerCardsHome > .card{
+    width: 30vw;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 19rem;
+    height: 15rem;
+  }
+  #containerCardsHome > .card h3{
+    font-size: 23px!important;
+  }
+  #botonTarjetas{
+    padding-left: 4.8vw;
+  }
+  #collapseInfoAcercaDe{
+    height: 40vw;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 39vh;
+  }
+}
+@media screen and (max-width:768px){
+  .text-header{
+    bottom: 30vw;
+    transform: translateX(-50%);
+  }
+  .text-header2{
+    bottom: 10vh;
+    transform: translateX(-50%);
+  }
+  #containerCardsHome{
+    gap: 1vw!important;
+  }
+  #containerCardsHome > .card{
+    width: 40vw;
+    height: 57vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 14.6rem;
+    height: 11rem;
+  }
+  #containerCardsHome > .card h3{
+    font-size: 19px!important;
+  }
+  #containerCardsHome > .card .card-text{
+    font-size: 14px!important;
+  }
+  #botonTarjetas{
+    padding-left: 5.7vw;
+  }
+  #collapseInfoAcercaDe{
+    height: 54vw;
+  }
+  #contenedorTecnologiasUsadas{
+    margin-top: 3vw;
+    height: 39vh;
+  }
+  #containerInfoAcercaDeText{
+    padding-top: 6vh;
+  }
 }

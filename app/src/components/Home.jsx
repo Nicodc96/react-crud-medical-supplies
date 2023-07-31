@@ -44,7 +44,7 @@ export const Home = () => {
                 </div>
                 <div className="d-flex justify-content-center pt-5" id="contenedorBtnTarjetas">
                     <Link to={'/equipos'}>
-                        <button id="botonTarjetas" className="btn pe-5">Ver todos los equipos</button>
+                        <button type="button" id="botonTarjetas" className="btn pe-5">Ver todos los equipos</button>
                     </Link>
                 </div>
             </section>
