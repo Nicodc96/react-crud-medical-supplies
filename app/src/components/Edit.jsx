@@ -5,8 +5,9 @@ import { db, storage } from '../firebaseConfig/firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { v4 } from 'uuid';
-import Swal from 'sweetalert2';
 import { Loading } from './Loading';
+import { Card } from "./CardShow";
+import Swal from 'sweetalert2';
 
 export const Edit = () => {
     const [nombre, setNombre] = useState("");
@@ -17,6 +18,7 @@ export const Edit = () => {
     const [antiguedad, setAntiguedad] = useState(0);
     const [imgSrc, setImgSrc] = useState("");
     const [imgUpload, setImgUpload] = useState(null);
+    const [equipment, setEquipment] = useState(null);
 
     const navigate = useNavigate();
     const { equipmentId } = useParams();
@@ -49,6 +51,7 @@ export const Edit = () => {
     const getEquipmentById = async (id) => {
         const equipmentDoc = await getDoc(await doc(db, "medicalSupplies", id));
         if (equipmentDoc.exists()){
+            setEquipment(equipmentDoc.data());
             setNombre(equipmentDoc.data().nombre);
             setMarca(equipmentDoc.data().marca);
             setModelo(equipmentDoc.data().modelo);
@@ -106,89 +109,103 @@ export const Edit = () => {
         return (<><Loading /></>);
     }
     return (
-    <section className="d-flex justify-content-center pt-4">
-        <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
-            <h2 className='mt-4 mb-5 fs-3 fw-lighter'>Complete el formulario</h2>
-            <form id='formEdit' onSubmit={confirmModify}>
-                <div className="row">
-                    <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
-                        <label htmlFor='inputNombre' className='form-label'>Nombre: </label>
-                        <label htmlFor='formMarca' className='form-label'>Marca: </label>
-                        <label htmlFor='formModelo' className='form-label'>Modelo: </label>
-                        <label htmlFor='formEstado' className='form-label'>Estado: </label>
-                        <label htmlFor='formCantidad' className='form-label'>Cantidad: </label>
-                        <label htmlFor='formAntiguedad' className='form-label'>Antiguedad: </label>
-                        <label htmlFor='formImagen' className='form-label'>Imagen: </label>
-                    </div>
-                    <div className="col-8 mb-3 d-flex flex-column align-items-center gap-3 px-0 pe-0">
-                        <input 
-                            type="text" 
-                            name='inputNombre' 
-                            className='form-control' 
-                            value={nombre} 
-                            onChange={(e) => setNombre(e.target.value)} 
-                            id='formNombre'
-                        />
-                        <input 
-                            type="text" 
-                            name='formMarca'
-                            className='form-control' 
-                            value={marca} 
-                            onChange={(e) => setMarca(e.target.value)}
-                            id='formMarca'
-                        />
-                        <input 
-                            type="text" 
-                            name='formModelo' 
-                            className='form-control' 
-                            value={modelo} 
-                            onChange={(e) => setModelo(e.target.value)} 
-                            id='formModelo'
-                        />
-                        <input 
-                            type="text" 
-                            name='formEstado' 
-                            className='form-control' 
-                            value={estado} 
-                            onChange={(e) => setEstado(e.target.value)} 
-                            id='formEstado'
-                        />
-                        <input 
-                            type="number" 
-                            name='formCantidad' 
-                            className='form-control' 
-                            value={cantidad} 
-                            onChange={(e) => setCantidad(e.target.value)} 
-                            id='formCantidad'
-                            min='1' max='99'
-                        />
-                        <input 
-                            type="number" 
-                            name='formAntiguedad' 
-                            className='form-control' 
-                            value={antiguedad} 
-                            onChange={(e) => setAntiguedad(e.target.value)} 
-                            id='formAntiguedad'
-                            min='0' max='50'
-                        />
-                        <input 
-                            type="file"
-                            name='formImagen'
-                            className='form-control'
-                            accept='image/png, image/jpeg, image/jpg'
-                            onChange={(e) => { setImgUpload(e.target.files[0]) }}
-                            id='formImagen'
-                        />
-                    </div>
-                </div>
-                <div className='d-flex justify-content-evenly mt-4'>
-                    <Button variant='success' type="submit">Modificar</Button>
-                    <Link to="/equipos">                        
-                        <Button variant='secondary'>Cancelar</Button>
-                    </Link>
-                </div>
-            </form>
-        </article>
+    <>
+    <section id="contenedorTituloEdit">
+        <h2 className="text-center pt-4 fw-semibold pb-0 mb-0">Modificar un equipo médico</h2>
     </section>
+    <section className="row width-95">
+        <div className="col ps-0 pe-0">
+            <section className="d-flex justify-content-center pt-4">
+                <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
+                    <h2 className='mt-4 mb-5 fs-3 fw-lighter'>Complete el formulario</h2>
+                    <form id='formEdit' onSubmit={confirmModify}>
+                        <div className="row">
+                            <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
+                                <label htmlFor='inputNombre' className='form-label'>Nombre: </label>
+                                <label htmlFor='formMarca' className='form-label'>Marca: </label>
+                                <label htmlFor='formModelo' className='form-label'>Modelo: </label>
+                                <label htmlFor='formEstado' className='form-label'>Estado: </label>
+                                <label htmlFor='formCantidad' className='form-label'>Cantidad: </label>
+                                <label htmlFor='formAntiguedad' className='form-label'>Antiguedad: </label>
+                                <label htmlFor='formImagen' className='form-label'>Imagen: </label>
+                            </div>
+                            <div className="col-8 mb-3 d-flex flex-column align-items-center gap-3 px-0 pe-0">
+                                <input 
+                                    type="text" 
+                                    name='inputNombre' 
+                                    className='form-control' 
+                                    value={nombre} 
+                                    onChange={(e) => setNombre(e.target.value)} 
+                                    id='formNombre'
+                                />
+                                <input 
+                                    type="text" 
+                                    name='formMarca'
+                                    className='form-control' 
+                                    value={marca} 
+                                    onChange={(e) => setMarca(e.target.value)}
+                                    id='formMarca'
+                                />
+                                <input 
+                                    type="text" 
+                                    name='formModelo' 
+                                    className='form-control' 
+                                    value={modelo} 
+                                    onChange={(e) => setModelo(e.target.value)} 
+                                    id='formModelo'
+                                />
+                                <input 
+                                    type="text" 
+                                    name='formEstado' 
+                                    className='form-control' 
+                                    value={estado} 
+                                    onChange={(e) => setEstado(e.target.value)} 
+                                    id='formEstado'
+                                />
+                                <input 
+                                    type="number" 
+                                    name='formCantidad' 
+                                    className='form-control' 
+                                    value={cantidad} 
+                                    onChange={(e) => setCantidad(e.target.value)} 
+                                    id='formCantidad'
+                                    min='1' max='99'
+                                />
+                                <input 
+                                    type="number" 
+                                    name='formAntiguedad' 
+                                    className='form-control' 
+                                    value={antiguedad} 
+                                    onChange={(e) => setAntiguedad(e.target.value)} 
+                                    id='formAntiguedad'
+                                    min='0' max='50'
+                                />
+                                <input 
+                                    type="file"
+                                    name='formImagen'
+                                    className='form-control'
+                                    accept='image/png, image/jpeg, image/jpg'
+                                    onChange={(e) => { setImgUpload(e.target.files[0]) }}
+                                    id='formImagen'
+                                />
+                            </div>
+                        </div>
+                        <div className='d-flex justify-content-evenly mt-4'>
+                            <Button variant='success' type="submit">Modificar</Button>
+                            <Link to="/equipos">                        
+                                <Button variant='secondary'>Cancelar</Button>
+                            </Link>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </div>
+        <div className="col d-flex justify-content-center ps-0 pe-0">            
+            <div id="contenedorCardEdit">
+                <Card equipment={equipment} enableButtons={false} key={equipmentId} />
+            </div>        
+        </div>
+    </section>
+    </>
     )
 }

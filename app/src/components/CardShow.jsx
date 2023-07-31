@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { db, storage } from "../firebaseConfig/firebase";
 import { deleteDoc, doc, getDoc } from "firebase/firestore";
-import imgNotAvailable from '../assets/image_not_available.png';
-import Swal from "sweetalert2";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { listAll, ref, getDownloadURL, deleteObject } from "firebase/storage";
+import Swal from "sweetalert2";
+import imgNotAvailable from '../assets/image_not_available.png';
 
-export const Card = ({equipment}) => {
-    const imageListRef = ref(storage, "/images"); 
+export const Card = ({equipment, enableButtons}) => {
+    const imageListRef = ref(storage, "/images");
 
     /* DELETE REFERENCE AND ITEM FROM FIREBASE */
     const removeEquipment = async (id) => {
@@ -72,8 +72,8 @@ export const Card = ({equipment}) => {
                     <li><span className="fw-semibold">Estado:</span> {equipment.estado}</li>
                     <li><span className="fw-semibold">Cantidad:</span> {equipment.cantidad === 0 ? `Sin stock` :
                         (equipment.antiguedad === 1 ?
-                            `${equipment.cantidad} unidad` :
-                            `${equipment.cantidad} unidades`)}
+                        `${equipment.cantidad} unidad` :
+                        `${equipment.cantidad} unidades`)}
                     </li>
                     <li><span className="fw-semibold">Antigüedad:</span> {equipment.antiguedad === 0 ? `Nuevo` : 
                         (equipment.antiguedad === 1  ?
@@ -82,15 +82,16 @@ export const Card = ({equipment}) => {
                     </li>
                 </ul>
                 <div className="d-flex justify-content-center gap-2">
-                    <Link to={`/edit/${equipment.id}`}>
-                        <Button variant="warning" className="btn-modificar"><FaEdit size='20px' className="mb-1"/> Modificar</Button>
+                    <Link to={enableButtons === false ? "" : `/edit/${equipment.id}`}>
+                        <Button variant="warning" className={enableButtons === false ? "btn-modificar disabled" : "btn-modificar"}><FaEdit size='20px' className="mb-1"/> Modificar</Button>
                     </Link>
                     <Button 
-                        variant="danger" 
-                        onClick={() => confirmRemove(equipment.id)}>
+                        variant="danger"
+                        className={enableButtons === false ? "disabled" : ""}
+                        onClick={() => { if (enableButtons !== false) return confirmRemove(equipment.id) }}>
                         <FaTrashAlt size='20px' className="mb-1"/> Eliminar
                     </Button>
-                    </div>
+                </div>
             </div>
         </article>
         </>

@@ -298,6 +298,21 @@ footer{
   width: 18vw;
 }
 
+#contenedorCardEdit{
+  display: flex;
+  align-items: center;
+}
+#contenedorCardEdit > .card{
+  width: 20vw;
+  height: 52vh;
+}
+#contenedorCardEdit > .card > .card-body{
+  padding-top: 5vh;
+}
+#contenedorCardEdit > .card .card-img-top-custom{
+  height: 21vh!important;
+}
+
 /*------------- Buscador -------------*/
 #buscadorContainer {
   display: flex;
