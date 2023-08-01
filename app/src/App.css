@@ -112,7 +112,6 @@ footer{
   }
 }
 .text-header2{
-  /* bottom: 15vh; */
   transform: translateX(5%);
 }
 /*------------- Home -------------*/
@@ -160,6 +159,9 @@ footer{
 #containerNavButtons > a > button:hover{
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
+}
+.show, .collapsing{
+  transition: all 0.65s;
 }
 
 /*------------- Home Acerca De -------------*/
@@ -371,6 +373,17 @@ footer{
     bottom: 10vh;
     transform: translateX(-50%);
   }
+  .navbar > .container-fluid{
+    margin-left: 1rem!important;
+  }
+  #contenedorLogoReactNavbar{
+    position: absolute;
+    top: 2.2vh;
+    left: 48vw;
+  }
+  #contenedorLogoReactNavbar > img{
+    margin-right: 0px!important;
+  }
   #containerCardsHome{
     gap: 1vw!important;
   }
@@ -400,5 +413,143 @@ footer{
   }
   #containerInfoAcercaDeText{
     padding-top: 6vh;
+  }
+  .show{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width:425px){
+  .text-header, .text-header2{
+    font-size: 45px;
+    transform: translateX(-43%);
+  }
+  .text-header{
+    bottom: 30vh;
+  }
+  .text-header2{
+    bottom: 20vh;
+  }
+  .navbar > .container-fluid{
+    margin-left: 0px!important;
+  }
+  .header-text > p{
+    position: absolute;
+    width: max-content;
+    bottom: 12vh;
+    right: 1vw;
+  }
+  #headerCarousel .carousel-item{
+    height: 45vh;
+  }
+  #containerCardsHome{
+    flex-direction: column;
+    gap: 2vh!important;
+  }
+  #containerCardsHome > .card{
+    width: 60vw;
+    height: 57vh;
+  }
+  #botonTarjetas{
+    padding-left: 12vw;
+  }
+  #collapseInfoAcercaDe{
+    height: 68vh;
+  }
+  #containerInfoAcercaDeText{
+    font-size: 14px;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 55vh;
+  }
+  .logos-tecnologias{
+    width: 60px;
+    height: 60px;
+  }
+  .logo-extrawidth{
+    width: 100px;
+  }
+  #contenedorFooter{
+    margin-left: 0.5vw!important;
+    margin-right: 0.5vw!important;
+  }
+  #contenedorFooter, #contenedorLogoTextoFooter > p{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:375px){
+  .text-header, .text-header2{
+    font-size: 37px;
+    transform: translateX(-44%);
+  }
+  #contenedorLogoReactNavbar{
+    left: 43.4vw;
+  }
+  #containerCardsHome > .card{
+    width: 68vw;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 15.8rem;
+  }
+  .logo-extrawidth{
+    width: 80px;
+    height: 50px;
+  }
+  #containerInfoAcercaDeText{
+    padding-top: 2vh;
+    font-size: 13px;
+  }
+  #collapseInfoAcercaDe{
+    height: 61vh;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 50vh;
+  }
+}
+@media screen and (max-width:320px){
+  .text-header, .text-header2{
+    .wrapper{
+      padding-left: 10px;
+    }
+  }
+  .header-text > p{
+    bottom: 15vh;
+    right: auto;
+  }
+  #contenedorLogoReactNavbar{
+    left: 42.5vw;
+  }
+  #containerCardsHome > .card{
+    width: 80vw;
+  }
+  #botonTarjetas{
+    padding-left: 15vw;
+  }
+  #collapseInfoAcercaDe{
+    height: 73vh;
+  }
+  #containerInfoAcercaDeText a > button {
+    margin-left: 10px!important;
+  }
+  #contenedorTecnologiasUsadas{
+    width: 28vw;
+    height: 62.7vh;
+  }
+  .logos-tecnologias{
+    width: 65px;
+    height: 65px;
+  }
+  .logo-extrawidth{
+    width: 85px;
+    height: 55px;
+  }
+  #collapseInfoAcercaDe h4{
+    margin-left: 8px;
+    font-size: 14px!important;
+    text-align: center;
+    font-weight: 500!important;
+  }
+  #contenedorLogoTextoFooter > p{
+    display: none;
   }
 }

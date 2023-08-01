@@ -17,7 +17,7 @@ export const Navegacion = () => {
                     aria-controls="containerNavButtons">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id='containerNavButtons'>
+                <div className="collapse navbar-collapse" id="containerNavButtons">
                     <Link className='nav-link' to={'/'}>
                         <button type='button' className='btn'>Home</button>
                     </Link>
@@ -25,7 +25,7 @@ export const Navegacion = () => {
                         <button type='button' className='btn'>Equipos</button>
                     </Link>
                 </div>
-                <div>
+                <div id="contenedorLogoReactNavbar">
                     <img src={logoReact} className='img-fluid me-5 rotation-effect' alt="logo-react" />
                 </div>
             </div>
