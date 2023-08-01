@@ -160,7 +160,7 @@ footer{
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
 }
-.show, .collapsing{
+ .collapsing{
   transition: all 0.65s;
 }
 
@@ -332,9 +332,23 @@ footer{
 
 /*------------- SECCION RESPONSIVE - MEDIA QUERIES -------------*/
 @media screen and (max-width:1440px){
+  #containerCardsHome > .card{
+    width: 30vw;
+  }
   #containerCardsHome > .card .card-img-top{
     width: 20.6rem;
     height: 18rem;
+  }
+}
+@media screen and (max-width:1250px){
+  #containerCardsHome{
+    gap: 2vw!important;
+  }
+  #collapseInfoAcercaDe{
+    height: 46vh;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 35vh;
   }
 }
 @media screen and (max-width:1024px){
@@ -363,16 +377,46 @@ footer{
   #contenedorTecnologiasUsadas{
     height: 39vh;
   }
+  #collapseInfoAcercaDe{
+    height: 50vh;
+  }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:990px){
   .text-header{
-    bottom: 30vw;
+    bottom: 30vh;
     transform: translateX(-50%);
   }
   .text-header2{
-    bottom: 10vh;
+    bottom: 14vh;
     transform: translateX(-50%);
   }
+  #containerCardsHome{
+    gap: 1vw!important;
+  }
+  #containerCardsHome > .card{
+    width: 60vw;
+    height: 65vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 14.6rem;
+    height: 11rem;
+  }
+  #collapseInfoAcercaDe{
+    height: 47vh;
+  }
+  #contenedorTecnologiasUsadas{
+    margin-top: 3vw;
+    height: 39vh;
+  }
+  .logos-tecnologias{
+    width: 60px;
+    height: 60px;
+  }
+  .logo-extrawidth{
+    width: 130px;
+  }
+}
+@media screen and (max-width:768px){
   .navbar > .container-fluid{
     margin-left: 1rem!important;
   }
@@ -384,16 +428,9 @@ footer{
   #contenedorLogoReactNavbar > img{
     margin-right: 0px!important;
   }
-  #containerCardsHome{
-    gap: 1vw!important;
-  }
-  #containerCardsHome > .card{
-    width: 40vw;
-    height: 57vh;
-  }
-  #containerCardsHome > .card .card-img-top{
-    width: 14.6rem;
-    height: 11rem;
+  .show{
+    display: flex;
+    justify-content: center;
   }
   #containerCardsHome > .card h3{
     font-size: 19px!important;
@@ -401,22 +438,107 @@ footer{
   #containerCardsHome > .card .card-text{
     font-size: 14px!important;
   }
+  #containerCardsHome > .card{
+    width: 70vw;
+    height: 65vh;
+  }
+  #containerCardsHome{
+    gap: 0.5vw!important;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 11rem;
+    height: 10rem;
+  }
   #botonTarjetas{
     padding-left: 5.7vw;
-  }
-  #collapseInfoAcercaDe{
-    height: 54vw;
-  }
-  #contenedorTecnologiasUsadas{
-    margin-top: 3vw;
-    height: 39vh;
   }
   #containerInfoAcercaDeText{
     padding-top: 6vh;
   }
-  .show{
-    display: flex;
-    justify-content: center;
+  #contenedorTecnologiasUsadas{
+    height: 36vh;
+  }
+}
+@media screen and (max-width:695px){
+  #containerInfoAcercaDeText{
+    padding-top: 2vh;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width:640px){
+  .text-header, .text-header2{
+    font-size: 53px;
+    transform: translateX(-60%);
+    bottom: 30vh;
+  }
+  .text-header2{
+    bottom: 20vh;
+  }
+  #containerCardsHome{
+    flex-direction: column;
+    gap: 2vh!important;
+  }
+  #containerCardsHome > .card{
+    width: 55vw;
+    height: 55vh;
+  }
+  #botonTarjetas{
+    padding-left: 8vw;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 21.5rem;
+    height: 15rem;
+  }
+  #collapseInfoAcercaDe{
+    height: 50vh;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 36vh;
+  }
+  .logos-tecnologias{
+    width: 55px;
+    height: 55px;
+  }
+  .logo-extrawidth{
+    width: 120px;
+    height: 90px;
+  }
+}
+@media screen and (max-width:570px){
+  .text-header, .text-header2{
+    font-size: 37px;
+    transform: translateX(-62%);
+    bottom: 30vh;
+  }
+  .text-header2{
+    bottom: 20vh;
+  }
+  #containerCardsHome{
+    flex-direction: column;
+    gap: 2vh!important;
+  }
+  #botonTarjetas{
+    padding-left: 12vw;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 17rem;
+    height: 15rem;
+  }
+  .logo-extrawidth{
+    width: 130px;
+    height: 95px;
+  }
+}
+@media screen and (max-width:500px){
+  #containerInfoAcercaDeText{
+    font-size: 14px;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 40vh;
+  }
+  .logo-extrawidth{
+    width: 100px;
+    height: 80px;
   }
 }
 @media screen and (max-width:425px){
@@ -532,16 +654,16 @@ footer{
     margin-left: 10px!important;
   }
   #contenedorTecnologiasUsadas{
-    width: 28vw;
-    height: 62.7vh;
+    width: 25vw;
+    height: 65vh;
   }
   .logos-tecnologias{
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
   }
   .logo-extrawidth{
-    width: 85px;
-    height: 55px;
+    width: 75px;
+    height: 50px;
   }
   #collapseInfoAcercaDe h4{
     margin-left: 8px;
