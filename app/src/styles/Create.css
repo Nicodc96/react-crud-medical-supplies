@@ -1,0 +1,12 @@
+/*------------- Create -------------*/
+#contenedorForm{
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    padding-bottom: 4vh;
+    background-color: white;
+  }
+  .container{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }

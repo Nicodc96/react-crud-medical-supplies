@@ -1,0 +1,67 @@
+/*------------- Home Acerca De -------------*/
+#contenedorAcercaDe{
+    background-color: #2d3136;
+    margin-top: 5vh;
+    height: 7vh;
+  }
+  #contenedorAcercaDeIcon{
+    margin-top: 0.60vw;
+    border-radius: 25px;
+    padding: 0.5rem;
+    transition: all 0.2s;
+  }
+  #acercaDeIcon{
+    width: 25px;
+    height: 25px;
+  }
+  #contenedorAcercaDeIcon:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+  #collapseInfoAcercaDe{
+    background-color: #2d3136;
+    transition: all 0.5s;
+  }
+  #containerInfoAcercaDeText{
+    padding-top: 8vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 40vh;
+  }
+  #contenedorTecnologiasUsadas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 5vh;
+    height: 30vh;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 1rem;
+  }
+  .logos-tecnologias{
+    width: 90px;
+    height: 90px;
+  }
+  .logo-extrawidth{
+    width: 180px;
+  }
+  .orange-tooltip, .yellow-tooltip, .green-tooltip{
+    --bs-tooltip-color: #25282c;
+  }
+  .orange-tooltip{
+    --bs-tooltip-bg: #ffa713;
+  }
+  .purple-tooltip{
+    --bs-tooltip-bg: #7809f7;
+  }
+  .yellow-tooltip{
+    --bs-tooltip-bg: #f0dc4e;
+  }
+  .green-tooltip{
+    --bs-tooltip-bg: #83cd29;
+  }
+  .blue-tooltip{
+    --bs-tooltip-bg: #0f6ec7;
+  }

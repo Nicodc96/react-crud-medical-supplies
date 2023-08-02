@@ -1,0 +1,11 @@
+/*------------- Buscador -------------*/
+#buscadorContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1vh;
+}
+#buscadorInput{
+height: 35px;
+border-radius: 10px;
+padding:  5px 30px 5px 10px;
+}

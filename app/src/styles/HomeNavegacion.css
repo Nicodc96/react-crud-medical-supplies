@@ -1,0 +1,11 @@
+/*------------- Home Navegacion -------------*/
+#containerNavButtons > a > button{
+    border-radius: 8px;
+  }
+  #containerNavButtons > a > button:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+   .collapsing{
+    transition: all 0.65s;
+  }
