@@ -1,4 +1,6 @@
 /*------------- SECCION RESPONSIVE - MEDIA QUERIES -------------*/
+
+/* HOME.JSX */
 @media screen and (max-width:1440px){
   #containerCardsHome > .card{
     width: 30vw;
@@ -311,12 +313,14 @@
     height: 50vh;
   }
 }
-@media screen and (max-width:320px){
+@media screen and (max-width:360px){
   .text-header, .text-header2{
     .wrapper{
-      padding-left: 10px;
+      padding-right: 10px;
     }
   }
+}
+@media screen and (max-width:320px){
   .header-text > p{
     bottom: 15vh;
     right: auto;
@@ -359,10 +363,7 @@
   }
 }
 
-/* Height */
-/*  ----------- MAX ----------- */
-
-/*  ----------- MIN ----------- */
+/* SHOW.JSX */
 @media (min-height: 500px){
   .text-header, .text-header2{
     bottom: 5vh;
@@ -501,11 +502,211 @@
     height: max-content;
   }
 }
-/* @media (min-height: 768px) and (max-width:1440px) {
+@media (min-height: 801px) and (max-height:900px) {
+  #containerControlsCards{
+    height: 40vh!important;
+  }
+  #contenedorCards > .card{
+    height: 45vh!important;
+  }
   #wrapperControlsCards{
-    height: 185vh;
+    height: 130vh!important;
+  }
+  #contenedorCards{
+    gap: 15px!important;
+    height: max-content;
+  }
+}
+@media screen and (max-width:1440px) {
+  .text-header, .text-header2{
+    bottom: 20vh;
+  }
+}
+@media screen and (max-width:1024px) {
+  .text-header, .text-header2{
+    bottom: 22vh;
+  }
+  #contenedorCards > .card{
+    width: 28vw;
+    height: 50vh!important;
+  }
+  .card-img-top-custom{
+    width: 14vw!important;
+    height: 18vh!important;
   }
   #containerControlsCards{
-    height: 45vh;
+    height: 41vh!important;
   }
-} */
+  #contenedorCards{
+    width: 65%;
+  }
+  #colControlCards{
+    width: 35%;
+  }
+  #buscadorInput{
+    width: 18vw;
+  }
+  #wrapperControlsCards{
+    height: 280vh!important;
+  }
+  #contenedorPaginacionRelleno{
+    width: 35%;
+  }
+  #contenedorPaginacion{
+    width: 65%;
+  }
+}
+@media screen and (max-width:990px) {
+  .text-header{
+    bottom: 30vh;
+  }
+  .text-header2{
+    bottom: 18vh;
+  }
+}
+@media screen and (max-width:800px) {
+  #contenedorCards > .card{
+    width: 29vw;
+    height: 53vh!important;
+  }
+  .card-img-top-custom{
+    width: 20vw!important;
+  }
+}
+@media screen and (max-width:768px) {
+  .text-header{
+    bottom: 30vh;
+  }
+  .text-header2{
+    bottom: 18vh;
+  }
+  #contenedorCards > .card{
+    width: 35vw;
+    height: 47vh!important;
+  }
+  .card-img-top-custom{
+    width: 18vw!important;
+  }
+  #contenedorCards{
+    width: 60%;
+  }
+  #colControlCards{
+    width: 40%;
+  }
+  #buscadorInput{
+    width: 18vw;
+  }
+  #wrapperControlsCards{
+    height: 560vh!important;
+  }
+  #contenedorPaginacion{
+    width: 60%;
+    font-size: 13px;
+    margin-top: 3vh;
+  }
+  #contenedorPaginacion > .btn {
+    font-size: 13px;
+    height: 5vh;
+    padding: 3px;
+  }
+  #contenedorPaginacionRelleno{
+    width: 40%;
+  }
+}
+@media screen and (max-width:680px) {
+  #contenedorCards > .card{
+    width: 40vw;
+    height: 47vh!important;
+  }
+  .card-img-top-custom{
+    width: 23vw!important;
+  }
+  #contenedorCards{
+    width: 50%;
+  }
+  #colControlCards{
+    width: 50%;
+  }
+  #contenedorPaginacionRelleno{
+    width: 0%;
+  }
+  #contenedorPaginacion{
+    width: 100%;
+    margin-left: 5vw;
+  }
+}
+@media screen and (max-width:550px) {
+  #colControlCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #containerControlsCards{
+    position: initial;
+    width: 80vw;
+    margin-left: 9vw;
+  }
+  #buscadorInput{
+    width: 35vw;
+  }
+  .divisor{
+    width: 50vw;
+  }
+  #wrapperControlsCards{
+    height: auto!important;
+    margin-bottom: 3vh;
+  }
+  #contenedorCards{
+    width: 100%;
+    gap: 5px!important;
+    margin-left: 4.5vw;
+  }
+  #contenedorCards > .card{
+    width: 44vw;
+    height: 50vh!important;
+  }
+  .card-title{
+    font-size: 16px!important;
+  }
+  .card-img-top-custom{
+    width: 23vw!important;
+    height: 20vh!important;
+  }
+  .btn-warning, .btn-danger{
+    padding: 5px;
+  }
+}
+@media screen and (max-width:500px) {
+  #buscadorInput{
+    width: 50vw;
+  }
+  #contenedorCards > .card{
+    width: 70vw;
+    height: 50vh!important;
+  }
+  .card-img-top-custom{
+    width: 35vw!important;
+  }
+}
+@media screen and (max-width:320px) {
+  #buscadorInput{
+    width: 55vw;
+  }
+  #contenedorCards > .card{
+    width: 80vw;
+  }
+  .card-img-top-custom{
+    width: 45vw!important;
+  }
+  #contenedorPaginacion > .btn {
+    font-size: 11px;
+    height: 6vh;
+    padding: 5px;
+  }
+  #contenedorPaginacion > p{
+    font-size: 11px;
+    width: 15vw;
+    margin-bottom: 0px;
+    margin-top: 1vh;
+  }
+}

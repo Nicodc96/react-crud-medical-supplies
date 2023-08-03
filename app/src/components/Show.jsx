@@ -72,7 +72,7 @@ export const Show = () => {
         <section className="pt-4 pb-5">
           <h2 className="text-center fs-2 pb-4 fw-lighter">Todos los equipos médicos</h2>
           <div className="row width-95">
-            <div className="col-3">
+            <div className="col-3" id="colControlCards">
               <div id="wrapperControlsCards">
                 <div id="containerControlsCards">
                   <Buscador />
@@ -112,7 +112,7 @@ export const Show = () => {
             </div>
           </div>
           <div className="row width-95">
-            <section className="col-3"></section>
+            <section className="col-3" id="contenedorPaginacionRelleno"></section>
             <section className="col-9" id="contenedorPaginacion">
               <Button 
                 className={page === 1 ? "btn primary disabled" : "primary"}
