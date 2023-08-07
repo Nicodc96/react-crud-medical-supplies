@@ -77,19 +77,19 @@ export const Create = () => {
             <h2 className="text-center pt-4 fw-semibold pb-0 mb-0">Registrar un equipo médico</h2>
         </section>
         <section className="row width-95"> 
-            <div className="col ps-0 pe-0 ms-5">
-                <section className="d-flex justify-content-center ms-5 pt-4">
-                    <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
+            <div className="col ps-0 pe-0 ms-5" id="colFormularioCrear">
+                <section className="d-flex justify-content-center ms-5 pt-4" id="contenedorFormularioCrear">
+                    <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id="contenedorForm">
                         <h2 className='mt-4 mb-3 fs-3 fw-lighter'>Complete el formulario</h2>
                         <form onSubmit={confirmCreate}>
-                        <div className="row">
+                        <div className="row" id="contenedorInputsLabels">
                             <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
                                 <label htmlFor='inputNombre' className='form-label'>Nombre: </label>
                                 <label htmlFor='formMarca' className='form-label'>Marca: </label>
                                 <label htmlFor='formModelo' className='form-label'>Modelo: </label>
                                 <label htmlFor='formEstado' className='form-label'>Estado: </label>
                                 <label htmlFor='formCantidad' className='form-label'>Cantidad: </label>
-                                <label htmlFor='formAntiguedad' className='form-label'>Antiguedad: </label>
+                                <label htmlFor='formAntiguedad' className='form-label'>Antigüedad: </label>
                                 <label htmlFor='formImagen' className='form-label'>Imagen: </label>
                             </div>
                             <div className="col-8 mb-3 d-flex flex-column align-items-center gap-3 px-0 pe-0">

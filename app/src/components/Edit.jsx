@@ -114,12 +114,12 @@ export const Edit = () => {
         <h2 className="text-center pt-4 fw-semibold pb-0 mb-0">Modificar un equipo médico</h2>
     </section>
     <section className="row width-95">
-        <div className="col ps-0 pe-0">
+        <div className="col ps-0 pe-0" id="colFormularioEdit">
             <section className="d-flex justify-content-center pt-4">
                 <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
                     <h2 className='mt-4 mb-5 fs-3 fw-lighter'>Complete el formulario</h2>
                     <form id='formEdit' onSubmit={confirmModify}>
-                        <div className="row">
+                        <div className="row" id="contenedorInputsLabelsEdit">
                             <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
                                 <label htmlFor='inputNombre' className='form-label'>Nombre: </label>
                                 <label htmlFor='formMarca' className='form-label'>Marca: </label>
@@ -200,7 +200,7 @@ export const Edit = () => {
                 </article>
             </section>
         </div>
-        <div className="col d-flex justify-content-center ps-0 pe-0">            
+        <div className="col d-flex justify-content-center ps-0 pe-0" id="colCardEdit">            
             <div id="contenedorCardEdit">
                 <Card equipment={equipment} enableButtons={false} key={equipmentId} />
             </div>

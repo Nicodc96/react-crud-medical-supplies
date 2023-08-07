@@ -711,9 +711,122 @@
   }
 }
 /* ---------------- CREATE.JSX ---------------- */
+@media screen and (max-width:425px) {
+  #contenedorTituloCreate > h2, #contenedorForm > h2{
+    font-size: 20px!important;
+  }
+  #contenedorFormularioCrear{
+    padding-top: 0.5rem!important;
+  }
+  #colFormularioCrear{
+    margin-left: 0px!important;
+  }
+  #contenedorForm{
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+  }
+  #contenedorInputsLabels > .col-4{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+    font-size: 14px;
+    gap: 1.9rem!important;
+  }
+  #contenedorInputsLabels > .col-8{
+    gap: 1.25rem!important;
+  }
+}
 
-
-
+/* ---------------- EDIT.JSX ---------------- */
+@media screen and (max-width:1440px) {
+  #contenedorCardEdit > .card{
+    width: 24vw;
+    height: 60vh;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 14vw!important;
+    height: 25vh!important;
+  }
+}
+@media screen and (max-width:1024px) {
+  #colFormularioEdit{
+    margin-left: 6vw;
+    width: 50%;
+  }
+  #colCardEdit{
+    width: 50%;
+  }
+  #contenedorCardEdit > .card{
+    width: 30vw;
+    height: 58vh;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 18vw!important;
+  }
+}
+@media screen and (max-width:768px) {
+  #contenedorCardEdit > .card{
+    width: 35vw;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 24vw!important;
+  }
+  #contenedorForm{
+    width: max-content;
+  }
+  #contenedorForm > h2{
+    text-align: center!important;
+    margin-bottom: 3vh!important;
+  }
+}
+@media screen and (max-width:700px) {
+  #colFormularioEdit{
+    width: 100%;
+  }
+  #colCardEdit{
+    width: 100%;
+    margin-left: 6vw;
+  }
+  #contenedorCardEdit > .card{
+    width: 45vw;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 30vw!important;
+  }
+}
+@media screen and (max-width:590px) {
+  #contenedorCardEdit > .card{
+    width: 50vw!important;
+    height: 62vh!important;
+  }
+}
+@media screen and (max-width:500px) {
+  #colCardEdit{
+    margin-left: 8vw;
+  }
+  #contenedorCardEdit > .card{
+    width: 60vw!important;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 40vw!important;
+  }
+}
+@media screen and (max-width:400px) {
+  #contenedorCardEdit > .card{
+    width: 70vw!important;
+    height: 58vh!important;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 50vw!important;
+  }
+}
+@media screen and (max-width:350px) {  
+  #contenedorCardEdit > .card{
+    width: 90vw!important;
+  }
+  #contenedorCardEdit > .card > .card-img-container > .card-img-top-custom{
+    width: 70vw!important;
+  }
+}
 /* ---------------- Específicas ---------------- */
 @media (height:667px) and (width:375px){
   /* Home.jsx */
