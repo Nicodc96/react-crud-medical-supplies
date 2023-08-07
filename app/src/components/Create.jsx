@@ -72,97 +72,113 @@ export const Create = () => {
           })
     }
     return (
-        <section className="d-flex justify-content-center pt-5 pb-5">
-            <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
-                <h2 className='mt-4 mb-3 fs-4'>Registro de un Equipo Médico</h2>
-                <form onSubmit={confirmCreate}>
-                <div className="row">
-                    <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
-                        <label htmlFor='inputNombre' className='form-label'>Nombre: </label>
-                        <label htmlFor='formMarca' className='form-label'>Marca: </label>
-                        <label htmlFor='formModelo' className='form-label'>Modelo: </label>
-                        <label htmlFor='formEstado' className='form-label'>Estado: </label>
-                        <label htmlFor='formCantidad' className='form-label'>Cantidad: </label>
-                        <label htmlFor='formAntiguedad' className='form-label'>Antiguedad: </label>
-                        <label htmlFor='formImagen' className='form-label'>Imagen: </label>
-                    </div>
-                    <div className="col-8 mb-3 d-flex flex-column align-items-center gap-3 px-0 pe-0">
-                        <input 
-                            type="text" 
-                            name='inputNombre' 
-                            className='form-control'
-                            placeholder='Nombre del equipo médico'
-                            value={nombre} 
-                            onChange={(e) => setNombre(e.target.value)} 
-                            id='formNombre'
-                            required
-                        />
-                        <input 
-                            type="text" 
-                            name='formMarca'
-                            className='form-control' 
-                            placeholder='Marca del equipo médico'
-                            value={marca} 
-                            onChange={(e) => setMarca(e.target.value)}
-                            id='formMarca'
-                        />
-                        <input 
-                            type="text" 
-                            name='formModelo' 
-                            className='form-control' 
-                            placeholder='Marca o número de referencia'
-                            value={modelo} 
-                            onChange={(e) => setModelo(e.target.value)} 
-                            id='formModelo'
-                        />
-                        <input 
-                            type="text" 
-                            name='formEstado' 
-                            className='form-control' 
-                            placeholder='Estado en el que se encuentra'
-                            value={estado} 
-                            onChange={(e) => setEstado(e.target.value)} 
-                            id='formEstado'
-                            required
-                        />
-                        <input 
-                            type="number" 
-                            name='formCantidad' 
-                            className='form-control' 
-                            placeholder='Stock del equipo médico'
-                            value={cantidad} 
-                            onChange={(e) => setCantidad(e.target.value)} 
-                            id='formCantidad'
-                            min='1' max='100'
-                        />
-                        <input 
-                            type="number" 
-                            name='formAntiguedad' 
-                            className='form-control'
-                            placeholder='Cuantos años tiene el equipo'
-                            value={antiguedad} 
-                            onChange={(e) => setAntiguedad(e.target.value)} 
-                            id='formAntiguedad'
-                            min='0' max='20'
-                        />
-                        <input 
-                            type="file"
-                            name='formImagen'
-                            className='form-control'
-                            accept='image/png, image/jpeg, image/jpg'
-                            onChange={(e) => { setImgUpload(e.target.files[0]) }}
-                            id='formImagen'
-                        />
-                    </div>
-                </div>
-                    <div className='d-flex justify-content-evenly mt-4'>
-                        <Button variant='success' type="submit">Crear</Button>
-                        <Link to="/equipos">                        
-                            <Button variant='secondary'>Cancelar</Button>
-                        </Link>
-                    </div>
-                </form>
-            </article>
+    <>
+        <section id="contenedorTituloCreate">
+            <h2 className="text-center pt-4 fw-semibold pb-0 mb-0">Registrar un equipo médico</h2>
         </section>
+        <section className="row width-95"> 
+            <div className="col ps-0 pe-0 ms-5">
+                <section className="d-flex justify-content-center ms-5 pt-4">
+                    <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id='contenedorForm'>
+                        <h2 className='mt-4 mb-3 fs-3 fw-lighter'>Complete el formulario</h2>
+                        <form onSubmit={confirmCreate}>
+                        <div className="row">
+                            <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
+                                <label htmlFor='inputNombre' className='form-label'>Nombre: </label>
+                                <label htmlFor='formMarca' className='form-label'>Marca: </label>
+                                <label htmlFor='formModelo' className='form-label'>Modelo: </label>
+                                <label htmlFor='formEstado' className='form-label'>Estado: </label>
+                                <label htmlFor='formCantidad' className='form-label'>Cantidad: </label>
+                                <label htmlFor='formAntiguedad' className='form-label'>Antiguedad: </label>
+                                <label htmlFor='formImagen' className='form-label'>Imagen: </label>
+                            </div>
+                            <div className="col-8 mb-3 d-flex flex-column align-items-center gap-3 px-0 pe-0">
+                                <input 
+                                    type="text" 
+                                    name='inputNombre' 
+                                    className='form-control'
+                                    placeholder='Nombre del equipo médico'
+                                    value={nombre} 
+                                    onChange={(e) => setNombre(e.target.value)} 
+                                    id='formNombre'
+                                    required
+                                />
+                                <input 
+                                    type="text" 
+                                    name='formMarca'
+                                    className='form-control' 
+                                    placeholder='Marca del equipo médico'
+                                    value={marca} 
+                                    onChange={(e) => setMarca(e.target.value)}
+                                    id='formMarca'
+                                />
+                                <input 
+                                    type="text" 
+                                    name='formModelo' 
+                                    className='form-control' 
+                                    placeholder='Marca o número de referencia'
+                                    value={modelo} 
+                                    onChange={(e) => setModelo(e.target.value)} 
+                                    id='formModelo'
+                                />
+                                <input 
+                                    type="text" 
+                                    name='formEstado' 
+                                    className='form-control' 
+                                    placeholder='Estado en el que se encuentra'
+                                    value={estado} 
+                                    onChange={(e) => setEstado(e.target.value)} 
+                                    id='formEstado'
+                                    required
+                                />
+                                <input 
+                                    type="number" 
+                                    name='formCantidad' 
+                                    className='form-control' 
+                                    placeholder='Stock del equipo médico'
+                                    value={cantidad} 
+                                    onChange={(e) => setCantidad(e.target.value)} 
+                                    id='formCantidad'
+                                    min='1' max='100'
+                                />
+                                <input 
+                                    type="number" 
+                                    name='formAntiguedad' 
+                                    className='form-control'
+                                    placeholder='Cuantos años tiene el equipo'
+                                    value={antiguedad} 
+                                    onChange={(e) => setAntiguedad(e.target.value)} 
+                                    id='formAntiguedad'
+                                    min='0' max='20'
+                                />
+                                <input 
+                                    type="file"
+                                    name='formImagen'
+                                    className='form-control'
+                                    accept='image/png, image/jpeg, image/jpg'
+                                    onChange={(e) => { setImgUpload(e.target.files[0]) }}
+                                    id='formImagen'
+                                />
+                            </div>
+                        </div>
+                            <div className='d-flex justify-content-evenly mt-4'>
+                                <Button variant='success' type="submit">Crear</Button>
+                                <Link to="/equipos">                        
+                                    <Button variant='secondary'>Cancelar</Button>
+                                </Link>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div className="d-flex justify-content-center">
+            <div id="contenedorBtnVolver">
+                <Link to="/equipos">                        
+                    <Button variant='secondary'>Volver al inicio</Button>
+                </Link>
+            </div>
+    </div>
+    </>
     )
 }

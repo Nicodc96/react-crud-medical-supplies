@@ -1,6 +1,6 @@
 /*------------- SECCION RESPONSIVE - MEDIA QUERIES -------------*/
 
-/* HOME.JSX */
+/* ---------------- HOME.JSX ---------------- */
 @media screen and (max-width:1440px){
   #containerCardsHome > .card{
     width: 30vw;
@@ -363,7 +363,7 @@
   }
 }
 
-/* SHOW.JSX */
+/* ---------------- SHOW.JSX ---------------- */
 @media (min-height: 500px){
   .text-header, .text-header2{
     bottom: 5vh;
@@ -708,5 +708,55 @@
     width: 15vw;
     margin-bottom: 0px;
     margin-top: 1vh;
+  }
+}
+/* ---------------- CREATE.JSX ---------------- */
+
+
+
+/* ---------------- Específicas ---------------- */
+@media (height:667px) and (width:375px){
+  /* Home.jsx */
+  #containerCardsHome > .card{
+    height: 65vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    height: 25vh;
+  }
+  #collapseInfoAcercaDe{
+    height: 73vh;
+  }
+  #contenedorTecnologiasUsadas{
+    width: 28vw;
+    height: 61vh;
+  }
+  #collapseInfoAcercaDe h4{
+    margin-left: 8px;
+    font-size: 14px!important;
+    text-align: center;
+    font-weight: 500!important;
+  }
+  .logos-tecnologias{
+    width: 55px;
+    height: 55px;
+  }
+  .logo-extrawidth{
+    width: 95px;
+    height: 50px;
+  }
+
+  /* Show.jsx */
+  #containerControlsCards{
+    height: 47vh!important;
+  }
+  #contenedorCards{
+    gap: 15px!important;
+  }
+  #contenedorCards > .card{
+    height: 61vh!important;
+  }
+  .card-img-top-custom{
+    width: 46vw!important;
+    height: 25vh!important;
   }
 }

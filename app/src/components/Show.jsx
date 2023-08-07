@@ -81,7 +81,8 @@ export const Show = () => {
                     variant="success"
                     className="mt-3 mb-3"
                     onClick={() => navigate("/create")}
-                  >Agregar un equipo</Button>
+                    >Registrar un equipo
+                  </Button>
                   <div className="divisor"/>
                   <p className="text-center fs-5 mt-1 mb-2">Ordenar datos</p>
                   <section id="contenedorCheckBoxOrdenar">
