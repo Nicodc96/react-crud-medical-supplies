@@ -5,10 +5,6 @@
   #containerCardsHome > .card{
     width: 30vw;
   }
-  #containerCardsHome > .card .card-img-top{
-    width: 20.6rem;
-    height: 18rem;
-  }
   #buscadorInput{
     width: 13vw;
     font-size: 14px;
@@ -55,6 +51,7 @@
   }
   #botonTarjetas{
     padding-left: 4.8vw;
+    padding-right: 4.8vw;
   }
   #collapseInfoAcercaDe{
     height: 40vw;
@@ -131,8 +128,8 @@
     gap: 0.5vw!important;
   }
   #containerCardsHome > .card .card-img-top{
-    width: 11rem;
-    height: 10rem;
+    width: 14.2rem;
+    height: 13rem;
   }
   #botonTarjetas{
     padding-left: 5.7vw;
@@ -254,11 +251,15 @@
     gap: 2vh!important;
   }
   #containerCardsHome > .card{
-    width: 60vw;
-    height: 57vh;
+    width: 70vw;
+    height: 61vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 69.2vw;
   }
   #botonTarjetas{
     padding-left: 12vw;
+    padding-right: 12vw;
   }
   #collapseInfoAcercaDe{
     height: 68vh;
@@ -333,6 +334,7 @@
   }
   #botonTarjetas{
     padding-left: 15vw;
+    padding-right: 15vw;
   }
   #collapseInfoAcercaDe{
     height: 73vh;

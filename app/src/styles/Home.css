@@ -2,36 +2,37 @@
 #containerCardsHome > .card{
     width: 23vw;
     height: 65vh;
-  }
-  #containerCardsHome .card-body{
-    padding: 0.7rem;
-  }
-  .card-img-container{
-    display: inline-block;
-    overflow: hidden;
-  }
-  .card-img-container > img{
-    display: block;
-    transition: all .45s;
-  }
-  .card-img-container > img:hover{
-    transform: scale(1.15);
-  }
-  .card-img-top{
-    width: 25rem;
-    height: 20rem;
-  }
-  #botonTarjetas{
-    background-color: #005bb1;
-    color: white;
-    font-weight: 500;
-    padding-left: 3vw;
-    border-radius: 4px;
-  }
-  #botonTarjetas:hover{
-    background-color: #1f71be!important;
-  }
-  .text-blue{
-    color: #005bb1;
-    font-size: 17px;
-  }
+}
+#containerCardsHome > .card .card-img-top{
+  width: 23.8rem;
+  height: 20rem;
+}
+#containerCardsHome .card-body{
+  padding: 0.7rem;
+}
+.card-img-container{
+  display: inline-block;
+  overflow: hidden;
+}
+.card-img-container > img{
+  display: block;
+  transition: all .45s;
+}
+.card-img-container > img:hover{
+  transform: scale(1.15);
+}
+#botonTarjetas{
+  background-color: #005bb1;
+  color: white;
+  font-weight: 500;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  border-radius: 4px;
+}
+#botonTarjetas:hover{
+  background-color: #1f71be!important;
+}
+.text-blue{
+  color: #005bb1;
+  font-size: 17px;
+}
