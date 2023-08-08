@@ -41,7 +41,6 @@ export const AcercaDe = () => {
                                 de este en aplicaciones reales consumiendo una información proporcionada por una API externa o interna.
                             </p>
                             <p className="ps-3 me-2">Este proyecto está orientado a la creación, lectura, edición y eliminación (CRUD) de equipos médicos.</p>
-                            <p className="ps-3 me-2 mt-2 fst-italic">El proyecto es una versión completamente personal del proyecto original diseñado en conjunto.</p>
                             <Link to={'https://github.com/Nicodc96/react-crud-medical-supplies'} target='_blank'>
                                 <button className="btn btn-outline-light ms-3">Link al repositorio</button>
                             </Link>
