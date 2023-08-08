@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { db } from "../firebaseConfig/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { Button } from "react-bootstrap";
@@ -60,7 +60,10 @@ export const Equip = () => {
               return;
             }
         });
-        if(arrayFiltrado.length === 0) setSinElementos(true);
+        if(arrayFiltrado.length === 0){
+          setSinElementos(true);
+          setEquipments([]);
+        }
     };
 
     useEffect(() => {
@@ -72,9 +75,9 @@ export const Equip = () => {
     }
     return sinElementos ? (
         // Si no encontró elementos el length va seguir siendo 0, por eso se utiliza la bandera 'sinElementos'
-        <section className="container-fluid d-flex flex-column align-items-center pt-5">
+        <section className="container-fluid d-flex flex-column align-items-center pt-5" id="contenedorNoEncontrado">
             <p className="fs-2">¡No se ha encontrado el elemento solicitado!</p>
-            <img src={notFound} alt="elemento_no_encontrado" className="img-fluid" width="300" />            
+            <img src={notFound} alt="elemento_no_encontrado" className="img-fluid" width="450" />            
             <Link to="/equipos">  
                 <Button variant='secondary' className="mb-4">Volver</Button>
             </Link>
@@ -136,7 +139,7 @@ export const Equip = () => {
           </div>
           <div className="row width-95">
             <section className="col-3"></section>
-            <section className="col-9">
+            <section className="col-9" id="colBtnVolver">
               <div id="contenedorBtnVolver">
                 <Link to="/equipos">                        
                     <Button variant='secondary'>Volver al inicio</Button>

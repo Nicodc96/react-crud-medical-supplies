@@ -207,7 +207,7 @@ export const Edit = () => {
         </div>
     </section>
     <div className="d-flex justify-content-center">
-        <div id="contenedorBtnVolver">
+        <div id="contenedorBtnVolverEdit">
         <Link to="/equipos">                        
             <Button variant='secondary'>Volver al inicio</Button>
         </Link>

@@ -16,3 +16,8 @@
 #contenedorCardEdit > .card .card-img-top-custom{
     height: 21vh!important;
 }
+#contenedorBtnVolverEdit{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 4vw;
+}

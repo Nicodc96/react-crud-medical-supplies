@@ -173,7 +173,7 @@ export const Create = () => {
             </div>
         </section>
         <div className="d-flex justify-content-center">
-            <div id="contenedorBtnVolver">
+            <div id="contenedorBtnVolverCreate">
                 <Link to="/equipos">                        
                     <Button variant='secondary'>Volver al inicio</Button>
                 </Link>
