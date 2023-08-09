@@ -12,6 +12,7 @@ import './styles/Show.css';
 import './styles/Create.css';
 import './styles/Edit.css';
 import './styles/Responsive.css';
+import './styles/ResponsiveSpecific.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
