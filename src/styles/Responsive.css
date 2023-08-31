@@ -1,6 +1,11 @@
 /*------------- SECCION RESPONSIVE - MEDIA QUERIES -------------*/
-
 /* ---------------- HOME.JSX ---------------- */
+@media screen and (max-width:1622px) {
+  #containerCardsHome > .card .card-img-top{
+    width: 23vw;
+    height: 35vh;
+  }
+}
 @media screen and (max-width:1440px){
   #containerCardsHome > .card{
     width: 30vw;
@@ -9,45 +14,65 @@
     width: 13vw;
     font-size: 14px;
   }
-  #contenedorCards{
+  #containerCardsHome{
     gap: 1rem!important;
   }
-  #contenedorCards > .card{
+  #containerCardsHome > .card{
     width: 22vw;
-    height: 46vh;    
+    height: 62vh;
   }
-  .card-img-top-custom{
-    width: 12vw!important;
-    height: 19vh!important;
+  #containerCardsHome > .card .card-img-top{
+    width: 22vw;
+    height: 26vh;
   }
 }
 @media screen and (max-width:1250px){
   #containerCardsHome{
     gap: 2vw!important;
   }
+  #containerCardsHome > .card{
+    width: 26vw;
+    height: 55vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 25vw;
+    height: 25vh;
+  }
+  #containerCardsHome > .card h3{
+    font-size: 23px!important;
+  }
   #collapseInfoAcercaDe{
     height: 46vh;
   }
   #contenedorTecnologiasUsadas{
-    height: 35vh;
+    height: 37vh;
+  }
+}
+@media screen and (max-width:1250px){
+  #containerCardsHome > .card .card-img-top{
+    height: 23vh;
+  }
+}
+@media screen and (max-width:1072px){
+  #containerCardsHome > .card h3{
+    font-size: 21px!important;
   }
 }
 @media screen and (max-width:1024px){
   .text-header, .text-header2{
     font-size: 55px;
+    bottom: 22vh;
   }
   #containerCardsHome{
     gap: 2vw!important;
   }
   #containerCardsHome > .card{
     width: 30vw;
+    height: 56vh;
   }
   #containerCardsHome > .card .card-img-top{
-    width: 19rem;
-    height: 15rem;
-  }
-  #containerCardsHome > .card h3{
-    font-size: 23px!important;
+    width: 29vw;
+    height: 25vh;
   }
   #botonTarjetas{
     padding-left: 4.8vw;
@@ -63,6 +88,20 @@
     height: 50vh;
   }
 }
+@media screen and (max-width:991px) {
+  #contenedorLogoReactNavbar{
+    position: absolute;
+    top: 2.2vh;
+    left: 49vw;
+  }
+  #contenedorLogoReactNavbar > img{
+    margin-right: 0px!important;
+  }
+  .show{
+    display: flex;
+    justify-content: center;
+  }
+}
 @media screen and (max-width:990px){
   .text-header{
     bottom: 30vh;
@@ -76,12 +115,12 @@
     gap: 1vw!important;
   }
   #containerCardsHome > .card{
-    width: 60vw;
-    height: 65vh;
+    width: 40vw;
+    height: 60vh;
   }
   #containerCardsHome > .card .card-img-top{
-    width: 14.6rem;
-    height: 11rem;
+    width: 29vw;
+    height: 25vh;
   }
   #collapseInfoAcercaDe{
     height: 47vh;
@@ -98,6 +137,33 @@
     width: 130px;
   }
 }
+@media screen and (max-width:890px){
+  #containerCardsHome > .card{
+    height: 62vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 31vw;
+  }
+}
+@media screen and (max-width:830px){
+  #containerCardsHome > .card{
+    height: 65vh;
+  }
+}
+@media screen and (max-width:810px){
+  #containerCardsHome > .card{
+    height: 62vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    height: 25vh;
+  }
+  #containerCardsHome > .card h3{
+    font-size: 19px!important;
+  }
+  #containerCardsHome > .card .card-text{
+    font-size: 15px!important;
+  }
+}
 @media screen and (max-width:768px){
   .navbar > .container-fluid{
     margin-left: 1rem!important;
@@ -105,31 +171,19 @@
   #contenedorLogoReactNavbar{
     position: absolute;
     top: 2.2vh;
-    left: 48vw;
+    left: 47vw;
   }
-  #contenedorLogoReactNavbar > img{
-    margin-right: 0px!important;
+  #containerCardsHome{
+    gap: 0.5vw!important;
   }
-  .show{
-    display: flex;
-    justify-content: center;
+  #containerCardsHome > .card{
+    height: 59vh;
   }
   #containerCardsHome > .card h3{
     font-size: 19px!important;
   }
   #containerCardsHome > .card .card-text{
     font-size: 14px!important;
-  }
-  #containerCardsHome > .card{
-    width: 70vw;
-    height: 65vh;
-  }
-  #containerCardsHome{
-    gap: 0.5vw!important;
-  }
-  #containerCardsHome > .card .card-img-top{
-    width: 14.2rem;
-    height: 13rem;
   }
   #botonTarjetas{
     padding-left: 5.7vw;
@@ -139,6 +193,21 @@
   }
   #contenedorTecnologiasUsadas{
     height: 36vh;
+  }
+}
+@media screen and (max-width:740px){
+  #containerCardsHome{
+    flex-direction: column;
+    gap: 2vh!important;
+    padding-left: 26%;
+  }
+  #containerCardsHome > .card{
+    width: 50vw;
+    height: 60vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 49vw;
+    height: 31vh;
   }
 }
 @media screen and (max-width:695px){
@@ -156,20 +225,8 @@
   .text-header2{
     bottom: 20vh;
   }
-  #containerCardsHome{
-    flex-direction: column;
-    gap: 2vh!important;
-  }
-  #containerCardsHome > .card{
-    width: 55vw;
-    height: 55vh;
-  }
   #botonTarjetas{
     padding-left: 8vw;
-  }
-  #containerCardsHome > .card .card-img-top{
-    width: 21.5rem;
-    height: 15rem;
   }
   #collapseInfoAcercaDe{
     height: 50vh;
@@ -187,6 +244,9 @@
   }
 }
 @media screen and (max-width:570px){
+  #contenedorLogoReactNavbar{
+    left: 46vw;
+  }
   .text-header, .text-header2{
     font-size: 37px;
     transform: translateX(-62%);
@@ -202,13 +262,28 @@
   #botonTarjetas{
     padding-left: 12vw;
   }
-  #containerCardsHome > .card .card-img-top{
-    width: 17rem;
-    height: 15rem;
-  }
   .logo-extrawidth{
     width: 130px;
     height: 95px;
+  }
+  #contenedorTecnologiasUsadas{
+    height: 41vh;
+  }
+}
+@media screen and (max-width:550px){
+  #contenedorLogoReactNavbar{
+    left: 45.5vw;
+  }
+  #containerCardsHome{
+    padding-left: 20%;
+  }
+  #containerCardsHome > .card{
+    width: 60vw;
+    height: 60vh;
+  }
+  #containerCardsHome > .card .card-img-top{
+    width: 59vw;
+    height: 31vh;
   }
 }
 @media screen and (max-width:500px){
@@ -219,7 +294,7 @@
     height: 40vh;
   }
   .logo-extrawidth{
-    width: 100px;
+    width: 125px;
     height: 80px;
   }
 }
@@ -247,8 +322,7 @@
     height: 45vh;
   }
   #containerCardsHome{
-    flex-direction: column;
-    gap: 2vh!important;
+    padding-left: 15%;
   }
   #containerCardsHome > .card{
     width: 70vw;
@@ -295,9 +369,10 @@
   }
   #containerCardsHome > .card{
     width: 68vw;
+    height: 66vh;
   }
   #containerCardsHome > .card .card-img-top{
-    width: 15.8rem;
+    width: 66vw;
   }
   .logo-extrawidth{
     width: 80px;
@@ -367,9 +442,6 @@
 
 /* ---------------- SHOW.JSX ---------------- */
 @media (min-height: 500px){
-  .text-header, .text-header2{
-    bottom: 5vh;
-  }
   #containerControlsCards{
     height: 67vh!important;
   }
@@ -378,9 +450,6 @@
   }
 }
 @media (min-height: 530px){
-  .text-header, .text-header2{
-    bottom: 12vh;
-  }
   #containerControlsCards{
     height: 60vh!important;
   }
@@ -389,9 +458,6 @@
   }
 }
 @media (min-height: 550px){
-  .text-header, .text-header2{
-    bottom: 12vh;
-  }
   #containerControlsCards{
     height: 53vh!important;
   }
@@ -404,9 +470,6 @@
   }
 }
 @media (min-height: 600px) {
-  .text-header, .text-header2{
-    bottom: 15vh;
-  }
   #containerControlsCards{
     height: 50vh!important;
   }
@@ -519,15 +582,7 @@
     height: max-content;
   }
 }
-@media screen and (max-width:1440px) {
-  .text-header, .text-header2{
-    bottom: 20vh;
-  }
-}
 @media screen and (max-width:1024px) {
-  .text-header, .text-header2{
-    bottom: 22vh;
-  }
   #contenedorCards > .card{
     width: 28vw;
     height: 50vh!important;

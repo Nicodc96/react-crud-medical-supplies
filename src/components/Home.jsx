@@ -10,7 +10,7 @@ export const Home = () => {
         <section id="mainGridInfo">
             <section id="main-cards-home">
                 <h2 className="text-center pt-4 fs-2 pb-4 fw-lighter">Nuestros equipos</h2>
-                <div id="containerCardsHome" className="container fluid d-flex gap-5 justify-content-center">
+                <div id="containerCardsHome" className="container-fluid d-flex gap-5 justify-content-center">
                     <article className="card">
                         <div className="card-img-container">
                             <img src={imgDesfibrilador} className="card-img-top" alt="desfibrilador" />
