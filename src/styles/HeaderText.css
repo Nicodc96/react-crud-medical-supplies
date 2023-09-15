@@ -5,8 +5,8 @@
 	font-size: 75px;
 	display: flex;
 	position: absolute;
-	bottom: 22vh;
-	left: 50%;
+	bottom: 150px;
+	left: 85px;
   transform: translateX(-100%);
 	user-select: none;
 
@@ -16,21 +16,21 @@
     padding-top: 20px;  
     .letter {
       transition: ease-out 1s;
-      transform: translateY(15%);
+      transform: translateY(10px);
     }
     .shadow-custom {
       transform: scale(1, -1);
-      margin-top: -4vh;
+      margin-top: -40px;
       color: #9999993f;
       transition: ease-in 0.5s, ease-out 0.5s;
     }
     &:hover{
       .letter {
-        transform: translateY(-3%);
+        transform: translateY(-3px);
       }
       .shadow {
         opacity: 0;
-        transform: translateY(-3%);
+        transform: translateY(-3px);
       }
     }
   }

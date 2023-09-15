@@ -1,29 +1,29 @@
 /*------------- Show -------------*/
 .card-size{
   width: 16vw;
-  height: 46vh;
+  height: 425px;
 }
 .card-img-top-custom{  
   width: max-content!important;
-  height: 19vh!important;
+  height: 180px!important;
 }
 #contenedorCards, #containerControlsCards{
   padding-left: 0px;
   padding-right: 0px;
 }
 #wrapperControlsCards{
-  height: 38vh;
+  height: 950px;
 }
 #containerControlsCards{
   position: sticky;
-  top: 35vh;
+  top: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 37vh!important;
+  height: 340px;
   margin-left: 2vw;
-  padding-top: 2vh;
-  padding-bottom: 4vh;
+  padding-top: 17px;
+  padding-bottom: 35px;
   padding-left: 2vw;
   padding-right: 2vw;
   border-style: solid;
@@ -37,21 +37,18 @@
 }
 #contenedorPaginacion{
   display: flex;
-  margin-top: 5vh;
+  margin-top: 42px;
   gap: 10vw;
   justify-content: center;
 }
 #contenedorBtnVolver{
   display: flex;
-  margin-top: 2vh;
+  margin-top: 35px;
   justify-content: center;
-  padding-bottom: 4vh;
-}
-#contenedorOpcionesTabla{
-  gap: 35vw;
+  padding-bottom: 35px;
 }
 #contenedorCheckBoxOrdenar{
-  margin-top: 1vh;
+  margin-top: 10px;
 }
 
 /*------------- Card Show -------------*/

@@ -1,8 +1,8 @@
 /*------------- Create -------------*/
 #contenedorForm{
-  margin-top: 2vh;
-  margin-bottom: 4vh;
-  padding-bottom: 4vh;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
   background-color: white;
 }
 .container{
@@ -11,5 +11,5 @@
   justify-content: center;
 }
 #contenedorBtnVolverCreate{
-  margin-bottom: 5vh;
+  margin-bottom: 50px;
 }

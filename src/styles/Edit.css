@@ -8,16 +8,16 @@
 }
 #contenedorCardEdit > .card{
     width: 20vw;
-    height: 52vh;
+    height: 450px;
 }
 #contenedorCardEdit > .card > .card-body{
     padding-top: 5vh;
 }
 #contenedorCardEdit > .card .card-img-top-custom{
-    height: 21vh!important;
+    height: 170px!important;
 }
 #contenedorBtnVolverEdit{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 40px;
+    margin-bottom: 50px;
     margin-right: 4vw;
 }

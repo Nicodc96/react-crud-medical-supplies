@@ -2,10 +2,10 @@
 #buscadorContainer {
     display: flex;
     justify-content: center;
-    gap: 1vh;
+    gap: 10px;
 }
 #buscadorInput{
-height: 35px;
-border-radius: 10px;
-padding:  5px 30px 5px 10px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 5px 30px 5px 10px;
 }
