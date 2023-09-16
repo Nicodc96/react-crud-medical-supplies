@@ -1,68 +1,50 @@
 /*------------- Home Acerca De -------------*/
 #contenedorAcercaDe{
-    background-color: #2d3136;
-    margin-top: 50px;
-    height: 60px;
-  }
-  #contenedorAcercaDeIcon{
-    margin-top: 6px;
-    border-radius: 25px;
-    padding: 12px;
-    transition: all 0.2s;
-  }
-  #acercaDeIcon{
-    width: 25px;
-    height: 25px;
-  }
-  #contenedorAcercaDeIcon:hover{
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: white;
-  }
-  #collapseInfoAcercaDe{
-    background-color: #2d3136;
-    transition: all 0.5s;
-    height: 375px;
-  }
-  #containerInfoAcercaDeText{
-    padding-top: 70px;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    height: 300px;
-  }
-  #contenedorTecnologiasUsadas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    margin-top: 45px;
-    height: 270px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 10px;
-  }
-  .logos-tecnologias{
-    width: 90px;
-    height: 90px;
-  }
-  .logo-extrawidth{
-    width: 180px;
-  }
-  .orange-tooltip, .yellow-tooltip, .green-tooltip{
-    --bs-tooltip-color: #25282c;
-  }
-  .orange-tooltip{
-    --bs-tooltip-bg: #ffa713;
-  }
-  .purple-tooltip{
-    --bs-tooltip-bg: #7809f7;
-  }
-  .yellow-tooltip{
-    --bs-tooltip-bg: #f0dc4e;
-  }
-  .green-tooltip{
-    --bs-tooltip-bg: #83cd29;
-  }
-  .blue-tooltip{
-    --bs-tooltip-bg: #0f6ec7;
-  }
+  background-color: #2d3136;
+  margin-top: 50px;
+  height: 60px;
+}
+#contenedorAcercaDeIcon{
+  margin-top: 6px;
+  border-radius: 25px;
+  padding: 12px;
+  transition: all 0.2s;
+}
+#acercaDeIcon{
+  width: 25px;
+  height: 25px;
+}
+#contenedorAcercaDeIcon:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+#collapseInfoAcercaDe{
+  background-color: #2d3136;
+  transition: all 0.5s;
+  height: 375px;
+}
+#containerInfoAcercaDeText{
+  padding-top: 70px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  height: 300px;
+}
+#contenedorTecnologiasUsadas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  margin-top: 45px;
+  height: 270px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 10px;
+}
+.logos-tecnologias{
+  width: 90px;
+  height: 90px;
+}
+.logo-extrawidth{
+  width: 180px;
+}

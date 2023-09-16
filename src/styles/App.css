@@ -1,5 +1,36 @@
 @import url('https://fonts.cdnfonts.com/css/yanone-kaffeesatz');
 
+/* Generals */
+.orange-tooltip, .yellow-tooltip, .green-tooltip{
+  --bs-tooltip-color: #25282c;
+}
+.orange-tooltip{
+  --bs-tooltip-bg: #ffa713;
+}
+.purple-tooltip{
+  --bs-tooltip-bg: #7809f7;
+}
+.yellow-tooltip{
+  --bs-tooltip-bg: #f0dc4e;
+}
+.green-tooltip{
+  --bs-tooltip-bg: #83cd29;
+}
+.blue-tooltip{
+  --bs-tooltip-bg: #0f6ec7;
+}
+.rotation-effect{
+  animation: rotate-center infinite 20s linear;
+}
+@keyframes rotate-center{
+    from {
+      transform:rotate(0)
+    }
+    to {
+      transform:rotate(360deg)
+    }
+}
+/* ---------- */
 #headerCarousel{
   filter: brightness(40%);
 }
@@ -22,17 +53,6 @@
   position: absolute;
   left: 43.7vw;
   color: white;
-}
-.rotation-effect{
-  animation: rotate-center infinite 20s linear;
-}
-@keyframes rotate-center{
-    from {
-      transform:rotate(0)
-    }
-    to {
-      transform:rotate(360deg)
-    }
 }
 main{
   background-image: url('../assets/bg-repeat2.png');

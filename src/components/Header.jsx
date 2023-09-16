@@ -15,7 +15,6 @@ export const Header = () => {
                 </div>
                 <article className="header-text">
                     <HeaderText />
-                    <p className="fw-semibold fst-italic text-white-50">Codo a Codo ~ 2023</p>
                 </article>
             </header>
         </>
