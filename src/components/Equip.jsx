@@ -86,35 +86,40 @@ export const Equip = () => {
         <section className="pt-4">
           <h2 className="text-center fs-2 pb-4 fw-semibold">Listado de los equipos médicos</h2>
           <div className="row width-95">
-            <div className="col-3">
-              <div id="containerControlsCards">
-                <Buscador />
-                <div className="divisor"/>
-                <Link to="/create">
-                  <Button variant="success" className="mt-2 mb-2">Agregar un equipo</Button>
-                </Link>
-                <div className="divisor"/>
-                <p className="text-center fs-5 mb-1">Ordenar datos</p>
-                <section id='contenedorCheckBoxOrdenar'>
-                  <div className="row">
-                    <div className="col-2 d-flex flex-column gap-1">
-                      <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarAZ"
-                      onClick={() => setOrdenamiento(1)}/>
-                      <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarZA"
-                      onClick={() => setOrdenamiento(2)}/>
-                      <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarCantidad"
-                      onClick={() => setOrdenamiento(3)}/>
-                      <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarAntiguedad"
-                      onClick={() => setOrdenamiento(4)}/>
+            <div className="col-3" id="colControlCards">
+              <div id="wrapperControlsCards">
+                <div id="containerControlsCards">
+                  <Buscador />
+                  <div className="divisor"/>
+                  <Button
+                    variant="success"
+                    className="mt-3 mb-3"
+                    onClick={() => navigate("/create")}
+                    >Registrar un equipo
+                  </Button>
+                  <div className="divisor"/>
+                  <p className="text-center fs-5 mt-1 mb-2">Ordenar datos</p>
+                  <section id='contenedorCheckBoxOrdenar'>
+                    <div className="row">
+                      <div className="col-2 d-flex flex-column gap-1">
+                        <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarAZ"
+                        onClick={() => setOrdenamiento(1)}/>
+                        <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarZA"
+                        onClick={() => setOrdenamiento(2)}/>
+                        <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarCantidad"
+                        onClick={() => setOrdenamiento(3)}/>
+                        <input type="radio" className="form-check-input" name="radioOrdenamiento" id="chkOrdenarAntiguedad"
+                        onClick={() => setOrdenamiento(4)}/>
+                      </div>
+                      <div className="col-10 d-flex flex-column">
+                        <label htmlFor="chkOrdenarAZ" className="form-check-label">Alfabéticamente (A-Z)</label>
+                        <label htmlFor="chkOrdenarZA" className="form-check-label">Invertido (Z-A)</label>
+                        <label htmlFor="chkOrdenarCantidad" className="form-check-label">Según cantidad</label>
+                        <label htmlFor="chkOrdenarAntiguedad" className="form-check-label">Según antigüedad</label>
+                      </div>
                     </div>
-                    <div className="col-10 d-flex flex-column">
-                      <label htmlFor="chkOrdenarAZ" className="form-check-label">Alfabéticamente (A-Z)</label>
-                      <label htmlFor="chkOrdenarZA" className="form-check-label">Invertido (Z-A)</label>
-                      <label htmlFor="chkOrdenarCantidad" className="form-check-label">Según cantidad</label>
-                      <label htmlFor="chkOrdenarAntiguedad" className="form-check-label">Según antigüedad</label>
-                    </div>
-                  </div>
-                </section>
+                  </section>
+                </div>
               </div>
             </div>
             <div className="col-9 d-flex gap-3 flex-wrap justify-content-center" id="contenedorCards">
@@ -122,7 +127,7 @@ export const Equip = () => {
             </div>
           </div>
           <div className="row width-95">
-            <section className="col-3"></section>
+            <section className="col-3" id="contenedorPaginacionRelleno"></section>
             <section className="col-9" id="contenedorPaginacion">
               <Button 
                 className={page === 1 ? "btn primary disabled" : "primary"}
@@ -138,7 +143,7 @@ export const Equip = () => {
             </section>
           </div>
           <div className="row width-95">
-            <section className="col-3"></section>
+            <section className="col-3" id="colBtnVolverRelleno"></section>
             <section className="col-9" id="colBtnVolver">
               <div id="contenedorBtnVolver">
                 <Link to="/equipos">                        

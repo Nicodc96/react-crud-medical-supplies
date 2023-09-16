@@ -514,11 +514,41 @@
   }
 }
 /* ---------------- EQUIP.JSX ---------------- */
+@media screen and (max-width:1240px) {
+  #colBtnVolverRelleno{
+    width: 0%;
+  }
+  #colBtnVolver{
+    width: 100%;
+    padding-left: 38vw;
+  }
+}
+@media screen and (max-width:990px) {
+  #colBtnVolver{
+    padding-left: 7vw;
+  }
+}
+@media screen and (max-width:605px) {
+  #colBtnVolver{
+    padding-left: 11vw;
+  }
+}
+@media screen and (max-width:430px) {
+  #colBtnVolver{
+    padding-left: 7vw;
+  }
+}
 @media screen and (max-width:425px) {
   #contenedorNoEncontrado > p{
     text-align: center;
   }
 }
+@media screen and (max-width:360px) {
+  #colBtnVolver{
+    padding-left: 15vw;
+  }
+}
 /* ---------------- CREATE.JSX ---------------- */
+
 
 /* ---------------- EDIT.JSX ---------------- */

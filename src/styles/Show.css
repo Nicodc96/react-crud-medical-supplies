@@ -16,7 +16,8 @@
 #contenedorCards .card-img-top-custom:hover{
   transform: scale(1.10);
 }
-#contenedorCards, #containerControlsCards{
+#contenedorCards, 
+#containerControlsCards{
   padding-left: 0px;
   padding-right: 0px;
 }
