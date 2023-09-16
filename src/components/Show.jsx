@@ -124,7 +124,7 @@ export const Show = () => {
               <Button 
                 className={page === maxPages ? "btn primary disabled" : "primary"} 
                 onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
-                Página Siguiente
+                Página siguiente
               </Button>
             </section>
           </div>

@@ -2,9 +2,6 @@
 #containerCardsHome{
   height: 600px;
 }
-.card, .card-body{
-  overflow-y: hidden;
-}
 #containerCardsHome > .card{
   width: 23vw;
   height: 600px;

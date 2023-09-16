@@ -1,18 +1,27 @@
 /*------------- Show -------------*/
-.card-size{
-  width: 16vw;
+#contenedorCards .card-size{
+  width: 18vw;
   height: 425px;
 }
-.card-img-top-custom{  
+#contenedorCards .card-img-container{
+  display: inline-block;
+  overflow: hidden;
+}
+#contenedorCards .card-img-top-custom{  
   width: max-content!important;
   height: 180px!important;
+  display: block;
+  transition: all .45s;
+}
+#contenedorCards .card-img-top-custom:hover{
+  transform: scale(1.10);
 }
 #contenedorCards, #containerControlsCards{
   padding-left: 0px;
   padding-right: 0px;
 }
 #wrapperControlsCards{
-  height: 950px;
+  height: 1400px;
 }
 #containerControlsCards{
   position: sticky;
