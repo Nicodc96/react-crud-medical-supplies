@@ -81,7 +81,7 @@ export const Create = () => {
                 <section className="d-flex justify-content-center ms-5 pt-4" id="contenedorFormularioCrear">
                     <article className='d-flex flex-column align-items-center border border-2 rounded px-5 pe-5 pb-3' id="contenedorForm">
                         <h2 className='mt-4 mb-3 fs-3 fw-lighter'>Complete el formulario</h2>
-                        <form onSubmit={confirmCreate}>
+                        <form id='formularioCrear' onSubmit={confirmCreate}>
                         <div className="row" id="contenedorInputsLabels">
                             <div className="col-4 mb-3 d-flex flex-column align-items-center gap-4">
                                 <label htmlFor='inputNombre' className='form-label'>Nombre: </label>

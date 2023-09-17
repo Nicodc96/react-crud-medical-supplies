@@ -532,15 +532,13 @@
   #colBtnVolver{
     padding-left: 11vw;
   }
+  #contenedorNoEncontrado > p{
+    text-align: center;
+  }
 }
 @media screen and (max-width:430px) {
   #colBtnVolver{
     padding-left: 7vw;
-  }
-}
-@media screen and (max-width:425px) {
-  #contenedorNoEncontrado > p{
-    text-align: center;
   }
 }
 @media screen and (max-width:360px) {
@@ -549,6 +547,142 @@
   }
 }
 /* ---------------- CREATE.JSX ---------------- */
-
+@media screen and (max-width:670px){
+  #colFormularioCrear{
+    margin-left: 0px!important;
+  }
+}
+@media screen and (max-width:500px){
+  #formularioCrear{
+    width: 78vw;
+  }
+}
+@media screen and (max-width:460px){
+  #formularioCrear{
+    width: 70vw;
+  }
+}
+@media screen and (max-width:365px){
+  #contenedorForm{
+    padding: 0!important;
+  }
+  #formularioCrear{
+    width: 90vw;
+    padding-left: 2.5vw;  
+    padding-right: 2.5vw;
+    padding-bottom: 20px;
+  }
+  #contenedorInputsLabels .col-8 .form-control{
+    width: 200px;
+  }
+}
+@media screen and (max-width:340px){
+  #contenedorInputsLabels .col-8 .form-control{
+    width: 170px;
+  }
+}
+@media screen and (max-width:315px){
+  #contenedorInputsLabels .col-4{
+    gap: 25px!important;
+  }
+  #contenedorInputsLabels .col-4 .form-label{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:300px){
+  #contenedorInputsLabels .col-8 .form-control{
+    width: 155px;
+  }
+  #contenedorInputsLabels .col-4 .form-label{
+    font-size: 13px;
+  }
+  #contenedorInputsLabels .col-4{
+    gap: 28px!important;
+  }
+}
 
 /* ---------------- EDIT.JSX ---------------- */
+@media screen and (max-width:1335px) {
+  #contenedorCardEdit .card{
+    width: 25vw;
+  }
+}
+@media screen and (max-width:1070px) {
+  #contenedorCardEdit .card{
+    width: 30vw;
+  }
+}
+@media screen and (max-width:900px) {
+  #colFormularioEdit,
+  #colCardEdit{
+    flex: 0 0 auto;
+    width: 100%;
+    margin-left: 5vw;
+  }
+  #contenedorCardEdit .card{
+    width: 34vw;
+  }
+}
+@media screen and (max-width:790px) {
+  #contenedorCardEdit .card{
+    width: 40vw;
+  }
+}
+@media screen and (max-width:670px) {
+  #contenedorCardEdit .card{
+    width: 50vw;
+  }
+}
+@media screen and (max-width:540px) {
+  #contenedorCardEdit .card{
+    width: 60vw;
+  }
+}
+@media screen and (max-width:450px) {
+  #contenedorCardEdit .card{
+    width: 70vw;
+  }
+}
+@media screen and (max-width:390px) {
+  #contenedorCardEdit .card{
+    width: 80vw;
+  }
+}
+@media screen and (max-width:370px) {
+  #formEdit{
+    width: 90vw;
+    padding-left: 2.5vw;  
+    padding-right: 2.5vw;
+    padding-bottom: 20px;
+  }
+  #contenedorInputsLabelsEdit .col-8 .form-control{
+    width: 200px;
+  }
+}
+@media screen and (max-width:340px) {
+  #contenedorCardEdit .card{
+    width: 90vw;
+  }
+  #contenedorInputsLabelsEdit .col-8 .form-control{
+    width: 170px;
+  }
+  #contenedorInputsLabelsEdit .col-4 .form-label{
+    font-size: 14px;
+  }
+  #contenedorInputsLabelsEdit .col-4{
+    gap: 26px!important;
+  }
+}
+@media screen and (max-width:300px){
+  #contenedorCardEdit .card{
+    width: 94vw;
+  }
+  #contenedorInputsLabelsEdit .col-8 .form-control{
+    width: 150px;
+  }
+}
+@media screen and (max-width:290px){
+  #contenedorCardEdit .card{
+    height: 480px;
+  }
+}
