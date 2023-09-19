@@ -1,5 +1,5 @@
 import { HeaderText } from "./HeaderText";
-import { Navegacion } from "./HomeNavegacion";
+import { Navegacion } from "./Navegacion";
 
 export const Header = () => {
     return (

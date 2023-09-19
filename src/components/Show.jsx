@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { collection, getDocs} from "firebase/firestore";
 import { db } from "../firebaseConfig/firebase";
 import { Button } from "react-bootstrap";
@@ -61,6 +60,11 @@ export const Show = () => {
         });
     };
 
+    const manageClassButtonPageUp = () => page === maxPages ? "btn primary disabled" : "primary";
+    const manageClassButtonPageDown = () => page === 1 ? "btn primary disabled" : "primary";
+    const managePagesUp = () => page <= maxPages ? setPage(page+1) : setPage(maxPages);
+    const managePagesDown = () => page === 1 ? setPage(page) : setPage(page-1);
+
     useEffect(() => {
         getEquipments(page, ordenamiento);
     }, [page, ordenamiento]);
@@ -109,21 +113,21 @@ export const Show = () => {
               </div>
             </div>
             <div className="col-9 d-flex gap-3 flex-wrap justify-content-center" id="contenedorCards">
-              {equipments.map(equipment => (<Card equipment={equipment} key={equipment.id}/>))}
+              {equipments.map(equipment => (<Card equipment={equipment} enableButtons={true} key={equipment.id}/>))}
             </div>
           </div>
           <div className="row width-95">
             <section className="col-3" id="contenedorPaginacionRelleno"></section>
             <section className="col-9" id="contenedorPaginacion">
               <Button 
-                className={page === 1 ? "btn primary disabled" : "primary"}
-                onClick={() => page === 1 ? setPage(page) : setPage(page-1)}>
+                className={manageClassButtonPageDown()}
+                onClick={() => managePagesDown()}>
                 Página anterior
               </Button>
               <p className="fw-semibold pt-1">Página: {page}</p>
               <Button 
-                className={page === maxPages ? "btn primary disabled" : "primary"} 
-                onClick={() => page <= maxPages ? setPage(page+1) : setPage(maxPages)}>
+                className={manageClassButtonPageUp()} 
+                onClick={() => managePagesUp()}>
                 Página siguiente
               </Button>
             </section>

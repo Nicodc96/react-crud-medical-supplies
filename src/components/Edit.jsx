@@ -105,9 +105,7 @@ export const Edit = () => {
         getEquipmentById(equipmentId);
     }, []);
 
-    if ((!nombre || !marca || !modelo || !estado || cantidad == 0) && antiguedad == 0){
-        return (<><Loading /></>);
-    }
+    if ((!nombre || !marca || !modelo || !estado || cantidad == 0) && antiguedad == 0) return (<><Loading /></>);
     return (
     <>
     <section id="contenedorTituloEdit">
