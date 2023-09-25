@@ -60,8 +60,6 @@ export const Show = () => {
         });
     };
 
-    const manageClassButtonPageUp = () => page === maxPages ? "btn primary disabled" : "primary";
-    const manageClassButtonPageDown = () => page === 1 ? "btn primary disabled" : "primary";
     const managePagesUp = () => page <= maxPages ? setPage(page+1) : setPage(maxPages);
     const managePagesDown = () => page === 1 ? setPage(page) : setPage(page-1);
 
@@ -120,13 +118,13 @@ export const Show = () => {
             <section className="col-3" id="contenedorPaginacionRelleno"></section>
             <section className="col-9" id="contenedorPaginacion">
               <Button 
-                className={manageClassButtonPageDown()}
+                className={AuxiliarFunctions.manageClassPage(page, 1)}
                 onClick={() => managePagesDown()}>
                 Página anterior
               </Button>
               <p className="fw-semibold pt-1">Página: {page}</p>
               <Button 
-                className={manageClassButtonPageUp()} 
+                className={AuxiliarFunctions.manageClassPage(page, maxPages)}
                 onClick={() => managePagesUp()}>
                 Página siguiente
               </Button>

@@ -1,8 +1,4 @@
 export const AuxiliarFunctions = {
-    /* 
-        El propósito de esta función es para al buscar en la BBDD nombres con acentos, quitarlos para realizar
-        una búsqueda limpia.
-     */
     quitarAcentos(text){
         const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U', 'ñ': 'n', 'Ñ': 'N'};
         return text.split('').map(letra => acentos[letra] || letra).join('').toString();	
@@ -21,5 +17,8 @@ export const AuxiliarFunctions = {
           case 4:
             return equipos.sort((a, b) => a.antiguedad === b.antiguedad ? 0 : (a.antiguedad > b.antiguedad ? 1 : -1));
         }
-      }
+    },
+    manageClassPage(page, condition){
+      return page === condition ? "btn primary disabled" : "primary";
+    }
 };
