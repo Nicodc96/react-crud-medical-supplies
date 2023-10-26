@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Loading } from "./Loading";
 import { Buscador } from "./Buscador";
 import { Card } from "./CardShow";
-import { AuxiliarFunctions } from "../functions/auxFuncions";
+import { AuxiliarFunctions } from "../utils/auxFuncions";
 import notFound from "../assets/notFound.png";
 
 export const Equip = () => {

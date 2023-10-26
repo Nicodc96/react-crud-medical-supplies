@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import { Buscador } from "./Buscador";
 import { Loading } from "./Loading";
 import { Card } from "./CardShow";
-import { AuxiliarFunctions } from "../functions/auxFuncions";
+import { AuxiliarFunctions } from "../utils/auxFuncions";
 import { useNavigate } from "react-router-dom";
 
 export const Show = () => {
